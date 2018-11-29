@@ -1,0 +1,47 @@
+{
+  "name": "sn-cloud-design",
+  "version": "0.0.1",
+  "private": true,
+  "browserslist": [
+    "> 4%",
+    "Chrome >= 67",
+    "Edge >= 14",
+    "Firefox >= 59",
+    "IE 11",
+    "last 4 versions",
+    "Safari >= 10"
+  ],
+  "scripts": {
+    "start": "sh -ac '. ./.env.development && react-app-rewired start --scripts-version react-scripts-ts",
+    "build": "react-app-rewired build --scripts-version react-scripts-ts",
+    "test": "react-app-rewired test --scripts-version react-scripts-ts --env=jsdom",
+    "lint": "tslint -c tslint.json 'src/**/*.ts', 'src/**/*.tsx' -o tslint.log"
+  },
+  "dependencies": {
+    "moment": "2.22.2",
+    "qrcode.react": "^0.8.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-helmet": "5.2.0",
+    "react-modal": "^3.6.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts-ts": "3.1.0",
+    "react-to-print": "^2.0.0-alpha-4"
+  },
+  "devDependencies": {
+    "@types/jest": "23.3.10",
+    "@types/node": "10.12.10",
+    "@types/react": "^16.7.8",
+    "@types/react-dom": "16.0.11",
+    "postcss-assets": "^5.0.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^12.0.1",
+    "postcss-nesting": "^7.0.0",
+    "postcss-preset-env": "^6.4.0",
+    "postcss-pxtorem": "^4.0.1",
+    "postcss-responsive-type": "^1.0.0",
+    "react-app-rewire-postcss": "^3.0.2",
+    "react-app-rewired": "^1.6.2",
+    "typescript": "^3.1.6"
+  }
+}

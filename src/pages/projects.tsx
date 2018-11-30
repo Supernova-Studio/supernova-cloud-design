@@ -83,7 +83,7 @@ export class Projects extends React.Component {
                                     hasDividers={true}
                                     isDropdownOpen={this.state.sortPopoverOpen}
                                     items={['Sort by name', 'Sort by newest', 'Sort by oldest']}
-                                    label={['Sort by ', <span key="drp_str_1">{String.fromCharCode(9662)}</span>]}
+                                    label={['Sort by ', <strong key="drp_str_0">Name</strong>, <span key="drp_str_1">{String.fromCharCode(9662)}</span>]}
                                 />
                             </li>
 

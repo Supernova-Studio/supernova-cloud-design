@@ -1,0 +1,20 @@
+/* Form elements */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px #fff inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: var(--color-black);
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px #ccc inset;
+    -webkit-text-fill-color: var(--color-black);
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+fieldset + fieldset {
+    margin-top: 40px;
+}

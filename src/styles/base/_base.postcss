@@ -1,0 +1,51 @@
+/* Base */
+:root {
+    --color-black: #181b1f;
+    --color-blue-dark: #262935;
+    --color-blue-medium: #0081d2;
+    --color-blue-vivid: #008ceb;
+    --color-green: #20cebc;
+    --color-gray: #707077;
+    --color-pink: #f40c92;
+    --color-purple: #641fae;
+    --color-purple-electric: #5773fe;
+
+    --radius-small: 2px;
+    --radius-medium: 10px;
+    --radius-big: 35px;
+
+    --tran-duration: .25s;
+    --tran-timing: ease-in-out;
+}
+
+.wrapper,
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page-wrapper,
+.page__body {
+    flex-grow: 1;
+}
+
+.page__title {
+    padding-top: 48px;
+    padding-bottom: 56px;
+    text-align: center;
+    background-color: var(--color-black);
+}
+
+.page__title .h2 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.page__body .container {
+    padding-bottom: 50px;
+}

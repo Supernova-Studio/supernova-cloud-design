@@ -1,0 +1,208 @@
+/* Typography */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Work Sans', 'Trebuchet MS', Arial, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+    margin-top: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.h1,
+h1 {
+    font-size: responsive 32px 56px;
+}
+
+.h2,
+h2 {
+    font-size: responsive 40px 48px;
+}
+
+.h3,
+h3 {
+    font-size: responsive 24px 32px;
+}
+
+.h4,
+h4 {
+    font-size: responsive 16px 24px;
+}
+
+.h5,
+h5 {
+    font-size: responsive 15px 18px;
+}
+
+.h6,
+h6 {
+    font-size: responsive 14px 16px;
+}
+
+.text--regular ul,
+dl,
+ol,
+p {
+    margin-bottom: 16px;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-bottom: 0;
+}
+
+span[role="menuitem"] {
+    font-size: 14px !important;
+}
+
+.text--small,
+small {
+    font-size: 12px;
+}
+
+.text--link,
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+b,
+strong,
+.text--bolder {
+    font-weight: 700;
+}
+
+.text--link,
+.text--link:hover,
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.text--link:hover,
+a:hover {
+    color: #2a98ce;
+}
+
+.link--blue,
+.link--gray,
+.link--white {
+    transition: color .25s ease-in-out;
+    text-decoration: none;
+}
+
+.link--blue:focus,
+.link--gray:focus,
+.link--white:focus {
+    text-decoration: underline;
+}
+
+.link--active {
+    text-decoration: none;
+    color: var(--color-blue-vivid);
+}
+
+.link--blue,
+.text--blue-light {
+    color: var(--color-blue-vivid) !important;
+}
+
+.link--gray:hover,
+.link--white:hover {
+    color: #2a98ce;
+}
+
+.link--gray {
+    color: #999;
+}
+
+.link--white {
+    color: #fff;
+}
+
+.link--white.link--active {
+    border-bottom-color: #2a98ce;
+}
+
+.list--unstyled {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.list--inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list--inline li {
+    display: inline-block;
+}
+
+.list--inline li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.text--big {
+    font-size: 38px;
+}
+
+.text--blue {
+    color: var(--color-blue-dark);
+}
+
+.text--medium {
+    font-weight: 500;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text--gray {
+    color: #999;
+}
+
+.text--white {
+    color: #fff;
+}
+
+.text--lowercase {
+    text-transform: lowercase;
+}
+
+.text--uppercase {
+    text-transform: uppercase;
+}

@@ -18,20 +18,20 @@ type CardActivityProjectProps = {
 // Component
 export class CardActivityProject extends React.Component<CardActivityProjectProps, {}> {
     render() {
-        return <a className="card card--activity-project" href="#">
+        return <div className="card card--activity card--activity-project">
             <div className="card__header">
-                <img src={this.props.avatarImageUrl} alt={this.props.username}/>
+                <img className="card__avatar" src={this.props.avatarImageUrl} alt={this.props.username}/>
             </div>
 
             <div className="card__body">
                 <h2 className="card__title">
                     <strong>{this.props.username}</strong>
-                    {this.props.cardType === 'created' ? 'created a new project' : 'updated project'}: {this.props.projectName} <span className="card--time">{this.props.time}</span>
+                    {this.props.cardType === 'created' ? ' created a new project' : ' updated project'}: <a href="">{this.props.projectName}</a> <span className="card__time">{this.props.time}</span>
                 </h2>
 
                 {this.props.cardType === 'created' ? (
                     <h3 className="card__subtitle">
-                        Created as mobile project with {this.props.numOfScreens} {this.props.numOfScreens > 1 ? 'screens' : 'screen'}
+                        Created as mobile project with {this.props.numOfScreens} {this.props.numOfScreens > 1 ? 'screens' : 'screen'}.
                     </h3>
                 ) : (
                     <h3 className="card__subtitle">
@@ -41,8 +41,8 @@ export class CardActivityProject extends React.Component<CardActivityProjectProp
                     </h3>
                 )}
 
-                <img src={this.props.projectThumbnail} alt={this.props.projectThumbnailAlt} />
+                <img className="card__thumbnail" src={this.props.projectThumbnail} alt={this.props.projectThumbnailAlt} />
             </div>
-        </a>
+        </div>
     }
 }

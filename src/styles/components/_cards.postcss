@@ -102,7 +102,7 @@
     font-family: Lato, sans-serif;
     font-size: 16px;
     font-weight: 500;
-    color: #262935;
+    color: var(--color-blue-dark);
 }
 
 .card--project + .card__content .card__subtitle {
@@ -138,23 +138,100 @@
     }
 }
 
-/* Card - Timeline */
-.card--timeline {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+/* Card - Activity */
+.card--activity {
+    width: 100%;
+    font-family: Lato, sans-serif;
+    color: var(--color-blue-dark);
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow-1);
+
+    &:hover {
+        color: var(--color-blue-dark);
+    }
 
     & .card__header,
     & .card__body {
-        padding: 16px 24px;
+        padding: 16px 0 16px 24px;
     }
 
-     & + .card--timeline {
-         margin-top: 40px;
+    & .card__body {
+        padding-left: 18px;
+        padding-right: 24px;
+        flex: 1;
+    }
+
+     & + .card--activity {
+        margin-top: 40px;
+     }
+
+     & .card__title {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 700;
+     }
+
+     & .card__subtitle {
+        font-size: 14px;
+        opacity: .5;
+     }
+
+     & .card__avatar {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+     }
+
+     & .card__time {
+        position: relative;
+        top: 2px;
+        float: right;
+        font-size: 14px;
+        font-weight: 900;
+        opacity: .5;
+     }
+
+     & a {
+        color: var(--color-blue-vivid);
+        transition: color var(--tran-duration) var(--tran-timing);
+
+        &:hover {
+            color: var(--color-blue-dark);
+        }
+     }
+
+     & .card__thumbnail {
+         margin-top: 20px;
      }
 }
 
 /* Card - Timeline - Person */
-.card--timeline-person {}
+.card--activity-member {}
 
-.card--timeline-comment {}
+.card--activity-comments {
+    & .activity-comments__comment {
+        display: flex;
 
-.card--timeline-project {}
+        & .card__header {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            & .card__header,
+            & .card__body {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    & .activity-comments__text {
+        margin-bottom: 0;
+    }
+
+    & .activity-comments__comment + .activity-comments__comment {
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+}
+
+.card--activity-project {}

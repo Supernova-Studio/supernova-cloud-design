@@ -4,6 +4,18 @@ import { Link } from 'react-router-dom'
 
 // Dashboard header implementation
 export class Header extends React.Component {
+    state = {
+        isProfileMenuOpened: false
+    }
+
+    handleProfileMenuToggle = (event) => {
+        event.preventDefault()
+
+        this.setState({
+            isProfileMenuOpened: !this.state.isProfileMenuOpened
+        })
+    }
+
     // Render the menu of the dashboard
     render() {
         return (
@@ -34,8 +46,44 @@ export class Header extends React.Component {
                                 <a className="link--blue nav-link">Download Studio</a>
                             </li>
 
+                            <li className="dropdown__container hide-md-down">
+                                <a className="nav-link link--user dropdown__toggler" href="profile.html" onClick={this.handleProfileMenuToggle}>AD <span>{String.fromCharCode(9662)}</span></a>
+
+                                <ul className={'dropdown__list dropdown__list--right' + (this.state.isProfileMenuOpened ? ' dropdown__list--visible' : '')}>
+                                    <li className="dropdown__item dropdown__item-content nav__user-info">
+                                        <span className="nav__user-label">Signed as</span>
+
+                                        <strong className="nav__user-name">Alex Devero</strong>
+                                    </li>
+
+                                    <li className="dropdown__item dropdown__divider" />
+
+                                    <li className="dropdown__item">
+                                        <Link className="dropdown__link no-underline" to="/account">Your account</Link>
+                                    </li>
+
+                                    <li className="dropdown__item">
+                                        <Link className="dropdown__link no-underline" to="/plan">Your plan</Link>
+                                    </li>
+
+                                    <li className="dropdown__item">
+                                        <Link className="dropdown__link no-underline" to="/settings">Personal settings</Link>
+                                    </li>
+
+                                    <li className="dropdown__item dropdown__divider hide-md-down" />
+
+                                    <li className="dropdown__item">
+                                        <a className="dropdown__link no-underline" href="#">Help</a>
+                                    </li>
+
+                                    <li className="dropdown__item">
+                                        <a className="dropdown__link no-underline" href="#">Sign out</a>
+                                    </li>
+                                </ul>
+                            </li>
+
                             <li>
-                                <button><span className="icon icon--settings" /></button>
+                                <Link to="/settings"><span className="icon icon--settings" /></Link>
                             </li>
                         </ul>
                     </nav>

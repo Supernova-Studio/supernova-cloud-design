@@ -13,9 +13,11 @@
 @import 'components/_icons.postcss';
 @import 'components/_nav-filter.postcss';
 @import 'components/_nav.postcss';
+@import 'components/_slider.postcss';
 
 /* Pages */
 @import 'pages/_page-activity.postcss';
+@import 'pages/_page-project-details.postcss';
 
 /* Utilities */
 @import 'utilities/_helpers.postcss';

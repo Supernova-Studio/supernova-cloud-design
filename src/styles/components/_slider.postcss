@@ -1,0 +1,44 @@
+/* Slider */
+.slider {
+    position: relative;
+    width: 157px;
+    height: 2px;
+}
+
+.slider__fill,
+.slider__track,
+.slider__thumb {
+    position: absolute;
+}
+
+.slider__thumb {
+    top: -8.5px;
+    left: 50%;
+    z-index: 3;
+    width: 4px;
+    height: 18px;
+    background-color: #fff;
+    box-shadow: var(--box-shadow-1);
+    cursor: pointer;
+}
+
+.slider__fill,
+.slider__track {
+    top: 0;
+    left: 0;
+}
+
+.slider__fill {
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-blue-vivid);
+}
+
+.slider__track {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .2;
+}

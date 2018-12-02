@@ -8,6 +8,7 @@ import { Account } from './pages/account'
 import { Home } from './pages/home'
 import { Plan } from './pages/plan'
 import { Projects } from './pages/projects'
+import { ProjectDetails } from './pages/project-details'
 import { Organization } from './pages/organization'
 import { Settings } from './pages/settings'
 
@@ -24,6 +25,7 @@ class App extends React.Component {
 
                     <Route path="/" component={Home} exact={true} />
                     <Route path="/projects" component={Projects} />
+                    <Route path="/project-details" component={ProjectDetails} />
                     <Route path="/activity" component={Activity} />
                     <Route path="/organization" component={Organization} />
                     <Route path="/account" component={Account} />

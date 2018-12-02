@@ -1,5 +1,6 @@
 // Imports
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 import { Dropdown } from './../components/dropdown'
 
@@ -32,7 +33,9 @@ export class CardProject extends React.Component<CardProjectProps, {}> {
         return <div className="col-md-6 col-lg-4 col-xl-3 card__container">
             <div className="card card--project">
                 <div className="card__header">
-                    <img src={this.props.imageUrl ? this.props.imageUrl : ''} alt="" className="card__thumbnail" />
+                    <Link to="/project-details" className="card__thumbnail-link">
+                        <img src={this.props.imageUrl ? this.props.imageUrl : ''} alt="" className="card__thumbnail" />
+                    </Link>
 
                     <div className="header__links">
                         <button onClick={() => this.handleFavorite()}>

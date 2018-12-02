@@ -108,6 +108,35 @@
     object-fit: cover;
 }
 
+.filter__nav--slider {
+    display: flex;
+    align-items: center;
+
+    & img {
+        width: 14px;
+        height: 14px;
+
+        &:first-of-type {
+            margin-right: 14px;
+        }
+
+        &:last-of-type {
+            margin-left: 14px;
+        }
+    }
+}
+
+.filter__nav .dropdown__container .filter__share-link {
+    display: flex;
+    color: var(--color-blue-vivid);
+
+    & img {
+        margin-right: 12px;
+        width: 14px;
+        height: 16px;
+    }
+}
+
 @media (max-width: 519px) {
     .filter__nav--right {
         flex-direction: column;

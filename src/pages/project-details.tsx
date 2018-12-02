@@ -48,6 +48,20 @@ export class ProjectDetails extends React.Component {
                             <li><a href="#">Manage team</a></li>
                         </ul>
 
+                        <div className="filter__nav--slider">
+                            <img src={require('images/icons/icon-grid-medium.svg')} alt="" />
+
+                            <div className="slider">
+                                <div className="slider__thumb" />
+
+                                <div className="slider__fill" />
+
+                                <div className="slider__track" />
+                            </div>
+
+                            <img src={require('images/icons/icon-grid-small.svg')} alt="" />
+                        </div>
+
                         <ul className="filter__nav filter__nav--desktop filter__nav--right">
                             <li>
                                 <Dropdown
@@ -56,7 +70,7 @@ export class ProjectDetails extends React.Component {
                                     hasDividers={true}
                                     isDropdownOpen={this.state.isSharePopoverOpen}
                                     items={['Twitter', 'Instagram', 'Facebook']}
-                                    label={[<span key="project_detail_0"><img src={require('images/icons/icon-share.svg')} alt="Share" /></span>, 'Share']}
+                                    label={[<a className="filter__share-link" key="project_detail_0"><img src={require('images/icons/icon-share.svg')} alt="Share" />Share</a>]}
                                 />
                             </li>
 
@@ -71,9 +85,9 @@ export class ProjectDetails extends React.Component {
                     </div>
                 </div>
 
-                <div className="page__body body--projects">
+                <div className="page__body body--project-details">
                     <div className="container">
-                        <div className="row project__row">
+                        <div className="row project-details__row">
                             {this.generateScreens()}
                         </div>
                     </div>

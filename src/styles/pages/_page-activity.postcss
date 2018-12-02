@@ -1,0 +1,18 @@
+/* Page - Activity */
+.activity__row {
+    position: relative;
+    padding-left: 95px;
+
+    &::before {
+        position: absolute;
+        top: 21px;
+        left: 48px;
+        content: '';
+        z-index: 0;
+        width: 2px;
+        height: calc(100% - 60px);
+        background-color: var(--color-black);
+        border: 0;
+        opacity: .2;
+    }
+}

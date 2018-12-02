@@ -14,6 +14,9 @@
 @import 'components/_nav-filter.postcss';
 @import 'components/_nav.postcss';
 
+/* Pages */
+@import 'pages/_page-activity.postcss';
+
 /* Utilities */
 @import 'utilities/_helpers.postcss';
 @import 'utilities/_hacks.postcss';

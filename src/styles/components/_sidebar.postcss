@@ -1,6 +1,9 @@
 /* Sidebar */
 .sidebar {
     padding: 48px 52px;
+    width: 100%;
+    max-width: 320px;
+    font-family: Lato, sans-serif;
     background-color: #f4f4f5;
 }
 
@@ -36,15 +39,28 @@
     align-items: center;
     font-size: 16px;
     font-weight: 900;
+    transition: color var(--tran-part);
+
+    & .icon,
+    & .avatar {
+        margin-right: 18px;
+    }
 
     & .icon {
-        margin-right: 18px;
         width: 100%;
         max-width: 20px;
         filter: var(--filter-icon-blue-to-black);
+        transition: filter var(--tran-part);
     }
 
     &:hover .icon {
         filter: none;
+    }
+
+    & .avatar {
+        display: block;
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
     }
 }

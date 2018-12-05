@@ -4,6 +4,7 @@ import * as React from 'react'
 type SidebarProps = {
     isOrganization: boolean;
     linkClickHandler: Function;
+    pageActive: string;
 }
 
 export class Sidebar extends React.PureComponent<SidebarProps, {}> {
@@ -14,7 +15,7 @@ export class Sidebar extends React.PureComponent<SidebarProps, {}> {
 
             <ul className="sidebar__list">
                 <li>
-                    <a onClick={() => this.props.linkClickHandler(event, 'isAccountVisible')} href="" className="sidebar__link">
+                    <a onClick={() => this.props.linkClickHandler(event, 'account')} href="" className={this.props.pageActive === 'account' ? 'sidebar__link sidebar__link--active' : 'sidebar__link'}>
                         <span className="icon icon--small icon--account"></span>
 
                         <span className="icon-label">Account</span>
@@ -22,7 +23,7 @@ export class Sidebar extends React.PureComponent<SidebarProps, {}> {
                 </li>
 
                 {this.props.isOrganization && <li>
-                    <a onClick={() => this.props.linkClickHandler(event, 'isTeamVisible')} href="" className="sidebar__link">
+                    <a onClick={() => this.props.linkClickHandler(event, 'team')} href="" className={this.props.pageActive === 'team' ? 'sidebar__link sidebar__link--active' : 'sidebar__link'}>
                         <span className="icon icon--small icon--team"></span>
 
                         <span className="icon-label">Team</span>
@@ -30,7 +31,7 @@ export class Sidebar extends React.PureComponent<SidebarProps, {}> {
                 </li>}
 
                 <li>
-                    <a onClick={() => this.props.linkClickHandler(event, 'isBillingVisible')} href="" className="sidebar__link">
+                    <a onClick={() => this.props.linkClickHandler(event, 'billing')} href="" className={this.props.pageActive === 'billing' ? 'sidebar__link sidebar__link--active' : 'sidebar__link'}>
                         <span className="icon icon--small icon--billing"></span>
 
                         <span className="icon-label">Billing</span>
@@ -39,7 +40,7 @@ export class Sidebar extends React.PureComponent<SidebarProps, {}> {
 
                 {!this.props.isOrganization && <React.Fragment>
                     <li>
-                        <a onClick={() => this.props.linkClickHandler(event, 'isNotificationsVisible')} href="" className="sidebar__link">
+                        <a onClick={() => this.props.linkClickHandler(event, 'notifications')} href="" className={this.props.pageActive === 'notifications' ? 'sidebar__link sidebar__link--active' : 'sidebar__link'}>
                             <span className="icon icon--small icon--notification"></span>
 
                             <span className="icon-label">Notifications</span>
@@ -47,7 +48,7 @@ export class Sidebar extends React.PureComponent<SidebarProps, {}> {
                     </li>
 
                     <li>
-                        <a onClick={() => this.props.linkClickHandler(event, 'isDevicesVisible')} href="" className="sidebar__link">
+                        <a onClick={() => this.props.linkClickHandler(event, 'devices')} href="" className={this.props.pageActive === 'devices' ? 'sidebar__link sidebar__link--active' : 'sidebar__link'}>
                             <span className="icon icon--small icon--device"></span>
 
                             <span className="icon-label">Devices</span>
@@ -55,7 +56,7 @@ export class Sidebar extends React.PureComponent<SidebarProps, {}> {
                     </li>
 
                     <li>
-                        <a onClick={() => this.props.linkClickHandler(event, 'isOrganizationsVisible')} href="" className="sidebar__link">
+                        <a onClick={() => this.props.linkClickHandler(event, 'organizations')} href="" className={this.props.pageActive === 'organizations' ? 'sidebar__link sidebar__link--active' : 'sidebar__link'}>
                             <span className="icon icon--small icon--organization"></span>
 
                             <span className="icon-label">Organizations</span>

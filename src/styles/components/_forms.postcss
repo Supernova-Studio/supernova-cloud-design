@@ -80,3 +80,21 @@ textarea {
         font-weight: 900;
     }
 }
+
+.input--color-picker {
+    flex-flow: row nowrap;
+
+    & input {
+        width: calc(100% - 40px);
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    & div {
+        width: 40px;
+        background-color: var(--color-blue-dark);
+        border-top-right-radius: var(--radius-small);
+        border-bottom-right-radius: var(--radius-small);
+    }
+}

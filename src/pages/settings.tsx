@@ -2,30 +2,30 @@
 import * as React from 'react'
 
 import { Sidebar } from './../components/sidebar'
-import { Account } from './../components/account'
-import { Team } from './../components/team'
-import { Billing } from './../components/billing'
-import { Notifications } from './../components/notifications'
-import { Devices } from './../components/devices'
-import { Organizations } from './../components/organizations'
+import { SettingsAccount } from './../components/SettingsAccount'
+import { SettingsTeam } from './../components/SettingsTeam'
+import { SettingsBilling } from './../components/SettingsBilling'
+import { SettingsNotifications } from './../components/SettingsNotifications'
+import { SettingsDevices } from './../components/SettingsDevices'
+import { SettingsOrganizations } from './../components/SettingsOrganizations'
 
 export class Settings extends React.Component {
     state = {
-        isAccountVisible: false,
-        isTeamVisible: false,
-        isBillingVisible: false,
-        isNotificationsVisible: false,
-        isDevicesVisible: false,
-        isOrganizationsVisible: false
+        activePage: 'account'
     }
 
-    handleSidebarLinkClick = (event, pageComponent) => {
+    handleSidebarLinkClick = (event, pageComponent: string) => {
         event.preventDefault()
 
-        console.log(pageComponent)
+        if (this.state.activePage === pageComponent) {
+            return
+        }
+
+        // TODO:
+        // - [] - add dynamic imports for page components (facebook.github.io/create-react-app/docs/code-splitting)
 
         this.setState({
-            [pageComponent]: !this.state[pageComponent]
+            activePage: pageComponent
         })
     }
 
@@ -39,19 +39,19 @@ export class Settings extends React.Component {
                 </div>
 
                 <div className="page__body">
-                    <Sidebar linkClickHandler={(event, pageComponent) => this.handleSidebarLinkClick(event, pageComponent)} isOrganization={false} />
+                    <Sidebar pageActive={this.state.activePage} linkClickHandler={(event, pageComponent) => this.handleSidebarLinkClick(event, pageComponent)} isOrganization={false} />
 
-                    {this.state.isAccountVisible && <Account />}
+                    {this.state.activePage === 'account' && <SettingsAccount />}
 
-                    {this.state.isTeamVisible && <Team />}
+                    {this.state.activePage === 'team' && <SettingsTeam />}
 
-                    {this.state.isBillingVisible && <Billing />}
+                    {this.state.activePage === 'billing' && <SettingsBilling />}
 
-                    {this.state.isNotificationsVisible && <Notifications />}
+                    {this.state.activePage === 'notifications' && <SettingsNotifications />}
 
-                    {this.state.isDevicesVisible && <Devices />}
+                    {this.state.activePage === 'devices' && <SettingsDevices />}
 
-                    {this.state.isOrganizationsVisible && <Organizations />}
+                    {this.state.activePage === 'organizations' && <SettingsOrganizations />}
                 </div>
             </div>
         )

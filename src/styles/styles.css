@@ -19,6 +19,7 @@
 /* Pages */
 @import 'pages/_page-activity.postcss';
 @import 'pages/_page-project-details.postcss';
+@import 'pages/_page-settings.postcss';
 
 /* Utilities */
 @import 'utilities/_helpers.postcss';

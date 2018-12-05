@@ -1,0 +1,38 @@
+/* Page - Settings */
+.page--settings {
+    & .page__body,
+    & .settings__content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    & .page__body {
+        flex-wrap: nowrap;
+    }
+
+    & .h3 {
+        margin-top: 0;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+}
+
+.settings__content,
+.settings__form,
+.settings__avatar {
+    width: 100%;
+}
+
+.settings__content {
+    flex-wrap: wrap;
+    padding: 32px;
+    max-width: calc(100% - var(--width--sidebar));
+}
+
+.settings__form {
+    max-width: calc(100% - 230px);
+}
+
+.settings__avatar {
+    max-width: 230px;
+}

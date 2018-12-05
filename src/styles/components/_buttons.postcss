@@ -10,7 +10,7 @@ button {
 .btn {
     &,
     & * {
-        text-transform: initial !important;
+        text-transform: initial;
     }
 
     display: inline-block;
@@ -43,40 +43,6 @@ button {
     }
 }
 
-.btn--full-width {
-    width: 100%;
-    max-width: 100%;
-}
-
-.btn--disabled {
-    &,
-    &:focus,
-    &:hover {
-        background-color: #4b5365 !important;
-        border: 1px solid #4b5365 !important;
-        box-shadow: 0 0 0 #fff !important;
-        cursor: auto;
-        pointer-events: none;
-    }
-}
-
-.btn--error {
-    background-color: #f44336;
-    border: 1px solid #f44336;
-}
-
-.btn--ghost {
-    color: var(--color-blue-vivid) !important;
-    background-color: transparent !important;
-    border: 1px solid var(--color-blue-vivid) !important;
-
-    &:focus,
-    &:hover {
-        color: #fff !important;
-        background-color: var(--color-blue-vivid) !important;
-    }
-}
-
 .btn--primary {
     &,
     & a {
@@ -95,20 +61,5 @@ button {
 
         background-color: #005f9e !important;
         border: 1px solid #005f9e !important;
-    }
-}
-
-.btn--round {
-    border-radius: 3px;
-}
-
-.btn--secondary {
-    background-color: #3e4252;
-    border: 1px solid #3e4252;
-
-    &:focus,
-    &:hover {
-        background-color: #515463;
-        border: 1px solid #515463;
     }
 }

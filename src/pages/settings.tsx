@@ -2,12 +2,12 @@
 import * as React from 'react'
 
 import { Sidebar } from './../components/sidebar'
-import { SettingsAccount } from './../components/SettingsAccount'
-import { SettingsTeam } from './../components/SettingsTeam'
-import { SettingsBilling } from './../components/SettingsBilling'
-import { SettingsNotifications } from './../components/SettingsNotifications'
-import { SettingsDevices } from './../components/SettingsDevices'
-import { SettingsOrganizations } from './../components/SettingsOrganizations'
+import { SettingsAccount } from './../components/settingsAccount'
+import { SettingsTeam } from './../components/settingsTeam'
+import { SettingsBilling } from './../components/settingsBilling'
+import { SettingsNotifications } from './../components/settingsNotifications'
+import { SettingsDevices } from './../components/settingsDevices'
+import { SettingsOrganizations } from './../components/settingsOrganizations'
 
 export class Settings extends React.Component {
     state = {
@@ -41,11 +41,11 @@ export class Settings extends React.Component {
                 <div className="page__body">
                     <Sidebar pageActive={this.state.activePage} linkClickHandler={(event, pageComponent) => this.handleSidebarLinkClick(event, pageComponent)} isOrganization={false} />
 
-                    {this.state.activePage === 'account' && <SettingsAccount />}
+                    {this.state.activePage === 'account' && <SettingsAccount isPersonal={true} />}
 
                     {this.state.activePage === 'team' && <SettingsTeam />}
 
-                    {this.state.activePage === 'billing' && <SettingsBilling />}
+                    {this.state.activePage === 'billing' && <SettingsBilling isPersonal={true} />}
 
                     {this.state.activePage === 'notifications' && <SettingsNotifications />}
 

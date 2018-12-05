@@ -1,9 +1,9 @@
 // Imports
 import * as React from 'react'
 
-type AccountProps = {}
+type SettingsTeamProps = {}
 
-export class Account extends React.PureComponent<AccountProps, {}> {
+export class SettingsTeam extends React.PureComponent<SettingsTeamProps, {}> {
     // Render the app
     render() {
         return <div />

@@ -1,6 +1,9 @@
 // Imports
 import * as React from 'react'
 
+import { FormPersonal } from './../components/FormPersonal'
+import { FormOrg } from './../components/FormOrg'
+
 type SettingsAccountProps = {
     isPersonal: boolean;
 }
@@ -8,6 +11,54 @@ type SettingsAccountProps = {
 export class SettingsAccount extends React.PureComponent<SettingsAccountProps, {}> {
     // Render the app
     render() {
-        return <div />
+        return (
+            <div className="settings__content">
+                <h2 className="h3">{this.props.isPersonal ? 'Public profile' : 'Organization profile'}</h2>
+
+                <div className="row">
+                    <div className="col-md-7">
+                        <div className="settings__form">
+                            {this.props.isPersonal ? <FormPersonal /> : <FormOrg />}
+                        </div>
+                    </div>
+
+                    <div className="col-md-5">
+                        <div className="settings__avatar">
+                            <h3 className="text--small">{this.props.isPersonal ? 'Profile picture' : 'Company Logo'}</h3>
+
+                            <img src={require('../images/avatar-jiri-big.png')} alt="Avatar image" />
+
+                            <div className="settings__avatar-btns">
+                                <button className="btn btn--ghost">Generate random</button>
+
+                                <button className="btn btn--ghost">Upload</button>
+                            </div>
+
+                            {!this.props.isPersonal && (
+                                <React.Fragment>
+                                    <div className="settings__avatar-color">
+                                        <h3 className="text--small">Primary Color</h3>
+
+                                        <div className="input-group input--color-picker">
+                                            <input type="text" />
+
+                                            <div></div>
+                                        </div>
+
+                                        <button className="btn btn--ghost">Update</button>
+                                    </div>
+                                </React.Fragment>
+                            )}
+                        </div>
+                    </div>
+                </div>
+
+                {!this.props.isPersonal && <React.Fragment>
+                    <h2 className="h3 mt-4">Organization Team</h2>
+
+                    <p className="form__note">To add, review, and remove team members, visit <a className="link--blue" href="#">Organization Details</a>.</p>
+                </React.Fragment>}
+            </div>
+        )
     }
 }

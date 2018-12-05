@@ -8,6 +8,10 @@ type SettingsBillingProps = {
 export class SettingsBilling extends React.PureComponent<SettingsBillingProps, {}> {
     // Render the app
     render() {
-        return <div />
+        return (
+            <div className="settings__content">
+                <h2 className="h3">Billing</h2>
+            </div>
+        )
     }
 }

@@ -1,7 +1,9 @@
 // Imports
 import * as React from 'react'
 
-type SettingsAccountProps = {}
+type SettingsAccountProps = {
+    isPersonal: boolean;
+}
 
 export class SettingsAccount extends React.PureComponent<SettingsAccountProps, {}> {
     // Render the app

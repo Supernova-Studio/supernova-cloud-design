@@ -16,5 +16,67 @@ fieldset {
 }
 
 fieldset + fieldset {
-    margin-top: 40px;
+    margin-top: 24px;
+}
+
+input,
+label,
+textarea,
+.form__note {
+    color: var(--color-blue-dark);
+}
+
+label {
+    display: block;
+    font-family: var(--ff-work-sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -.5px;
+}
+
+label + input,
+label + textarea {
+    margin-top: 8px;
+}
+
+input,
+textarea,
+.form__note {
+    font-family: var(--ff-lato);
+}
+
+input,
+textarea {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #d3d3d5;
+    border-radius: var(--radius-small);
+
+    &:focus {
+        border-color: var(--color-blue-vivid);
+        outline: none;
+    }
+}
+
+input[disabled] {
+    background-color: #f4f4f5;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.input--with-error {
+    border-color: var(--color-red);
+}
+
+.form__note {
+    font-size: 14px;
+
+    & a {
+        font-weight: 900;
+    }
 }

@@ -1,6 +1,7 @@
 // Imports
 import * as React from 'react'
 
+import { Button } from './../components/button'
 import { FormPersonal } from './../components/FormPersonal'
 import { FormOrg } from './../components/FormOrg'
 
@@ -29,9 +30,9 @@ export class SettingsAccount extends React.PureComponent<SettingsAccountProps, {
                             <img src={require('../images/avatar-jiri-big.png')} alt="Avatar image" />
 
                             <div className="settings__avatar-btns">
-                                <button className="btn btn--ghost">Generate random</button>
+                                <Button label="Generate random" type="ghost" />
 
-                                <button className="btn btn--ghost">Upload</button>
+                                <Button label="Upload" type="ghost" />
                             </div>
 
                             {!this.props.isPersonal && (
@@ -45,7 +46,7 @@ export class SettingsAccount extends React.PureComponent<SettingsAccountProps, {
                                             <div></div>
                                         </div>
 
-                                        <button className="btn btn--ghost">Update</button>
+                                        <Button label="Update" type="ghost" />
                                     </div>
                                 </React.Fragment>
                             )}

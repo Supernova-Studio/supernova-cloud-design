@@ -1,6 +1,8 @@
 // Imports
 import * as React from 'react'
 
+import { Button } from './../components/button'
+
 type FormPersonalProps = {}
 
 export class FormPersonal extends React.Component<FormPersonalProps, {}> {
@@ -19,10 +21,6 @@ export class FormPersonal extends React.Component<FormPersonalProps, {}> {
         this.setState({
             [event.target.name]: event.target.value
         })
-    }
-
-    handleFormSubmit = (event) => {
-        event.preventDefault()
     }
 
     // Render the app
@@ -70,7 +68,7 @@ export class FormPersonal extends React.Component<FormPersonalProps, {}> {
                 </fieldset>
 
                 <fieldset>
-                    <button className="btn btn--primary" onClick={this.handleFormSubmit}>Update your profile</button>
+                    <Button label="Update your profile" type="primary" />
                 </fieldset>
             </form>
         )

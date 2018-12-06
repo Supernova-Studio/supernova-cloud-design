@@ -1,6 +1,8 @@
 // Imports
 import * as React from 'react'
 
+import { Button } from './../components/button'
+
 type FormOrgProps = {}
 
 export class FormOrg extends React.Component<FormOrgProps, {}> {
@@ -17,10 +19,6 @@ export class FormOrg extends React.Component<FormOrgProps, {}> {
         this.setState({
             [event.target.name]: event.target.value
         })
-    }
-
-    handleFormSubmit = (event) => {
-        event.preventDefault()
     }
 
     // Render the app
@@ -56,7 +54,7 @@ export class FormOrg extends React.Component<FormOrgProps, {}> {
                 </fieldset>
 
                 <fieldset>
-                    <button className="btn btn--primary" onClick={this.handleFormSubmit}>Update organization profile</button>
+                    <Button label="Update organization profile" type="primary" />
                 </fieldset>
             </form>
         )

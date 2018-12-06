@@ -1,0 +1,40 @@
+/* Switch */
+.switch {
+    display: inline-flex;
+    position: relative;
+    width: 46px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: border var(--tran-part);
+}
+
+.switch__thumb {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: var(--tran-full);
+}
+
+.switch--inactive {
+    border: 1px solid #9fa2ae;
+
+    & .switch__thumb {
+        left: 2px;
+        background-color: #9fa2ae;
+    }
+}
+
+.switch--active {
+    border: 1px solid var(--color-blue-vivid);
+
+    & .switch__thumb {
+        left: calc(100% - 20px); /* 20px = 18px (thumb width) + 2px (switch inner "padding") */
+        background-color: var(--color-blue-vivid);
+    }
+}

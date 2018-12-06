@@ -1,6 +1,8 @@
 /* Sidebar */
 .sidebar {
-    padding: 48px 52px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 52px;
     width: 100%;
     max-width: var(--width--sidebar);
     font-family: var(--ff-lato);
@@ -37,9 +39,10 @@
 .sidebar__link {
     display: flex;
     align-items: center;
+    padding-right: 52px;
     font-size: 16px;
     font-weight: 900;
-    transition: color var(--tran-part);
+    transition: var(--tran-full);
 
     & .icon,
     & .avatar {
@@ -67,6 +70,7 @@
 
 .sidebar__link--active {
     color: var(--color-blue-vivid);
+    border-right: 3px solid var(--color-blue-vivid);;
 
     & .icon {
         filter: none;

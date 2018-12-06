@@ -16,6 +16,7 @@
 @import 'components/_notifications.postcss';
 @import 'components/_sidebar.postcss';
 @import 'components/_slider.postcss';
+@import 'components/_tables.postcss';
 
 /* Pages */
 @import 'pages/_page-activity.postcss';

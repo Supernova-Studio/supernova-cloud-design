@@ -31,6 +31,15 @@
     flex-direction: column;
     justify-content: center;
 
+    &[class*=col-] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &:not(:first-child) {
+        align-items: flex-end;
+    }
+
     & a {
         font-weight: 700;
     }
@@ -42,6 +51,7 @@
 }
 
 .table__cell-title {
+    display: flex;
     margin-bottom: 0;
     font-weight: 700;
 

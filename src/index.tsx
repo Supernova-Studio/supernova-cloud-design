@@ -7,6 +7,7 @@ import { Activity } from './pages/activity'
 import { Account } from './pages/account'
 import { Home } from './pages/home'
 import { Plan } from './pages/plan'
+import { NoAccess } from './pages/no-access'
 import { Projects } from './pages/projects'
 import { ProjectDetails } from './pages/project-details'
 import { Organization } from './pages/organization'
@@ -29,6 +30,7 @@ class App extends React.Component {
                     <Route path="/activity" component={Activity} />
                     <Route path="/organization" component={Organization} />
                     <Route path="/account" component={Account} />
+                    <Route path="/no-access" component={NoAccess} />
                     <Route path="/plan" component={Plan} />
                     <Route path="/settings" component={Settings} />
                 </React.Fragment>

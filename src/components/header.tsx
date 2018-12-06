@@ -59,7 +59,7 @@ export class Header extends React.Component {
                                     <li className="dropdown__item dropdown__divider" />
 
                                     <li className="dropdown__item">
-                                        <Link className="dropdown__link no-underline" to="/account">Your account</Link>
+                                        <Link className="dropdown__link no-underline" to="/no-access">Your account</Link>
                                     </li>
 
                                     <li className="dropdown__item">

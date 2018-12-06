@@ -15,7 +15,7 @@ export class SettingsDevices extends React.PureComponent<SettingsDevicesProps, {
                 <div className="table table--gray">
                     <div className="table__row">
                         <div className="table__cell">
-                            <strong>Jiri's Mac, SN: 3*********DFED</strong>
+                            <p className="table__cell-title">Jiri's Mac, SN: 3*********DFED</p>
                         </div>
 
                         <div className="table__cell">
@@ -25,7 +25,7 @@ export class SettingsDevices extends React.PureComponent<SettingsDevicesProps, {
 
                     <div className="table__row">
                         <div className="table__cell">
-                            <strong>Jiri's Mac 2, SN: 3*********DFED</strong>
+                            <p className="table__cell-title">Jiri's Mac 2, SN: 3*********DFED</p>
                         </div>
 
                         <div className="table__cell">

@@ -28,8 +28,38 @@
 .table__cell {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
     & a {
         font-weight: 700;
+    }
+
+    & p {
+        display: block;
+        width: 100%;
+    }
+}
+
+.table__cell-title {
+    margin-bottom: 0;
+    font-weight: 700;
+
+    &:only-child {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    & + .table__cell-title,
+    & + .table__cell-text {
+        margin-top: 4px;
+    }
+}
+
+.table__cell-text {
+    font-weight: 300;
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }

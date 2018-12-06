@@ -2,12 +2,12 @@
 import * as React from 'react'
 
 import { Sidebar } from './../components/sidebar'
-import { SettingsAccount } from './../components/settingsAccount'
-import { SettingsTeam } from './../components/settingsTeam'
-import { SettingsBilling } from './../components/settingsBilling'
-import { SettingsNotifications } from './../components/settingsNotifications'
-import { SettingsDevices } from './../components/settingsDevices'
-import { SettingsOrganizations } from './../components/settingsOrganizations'
+import { SettingsAccount } from './settings/settingsAccount'
+import { SettingsTeam } from './settings/settingsTeam'
+import { SettingsBilling } from './settings/settingsBilling'
+import { SettingsNotifications } from './settings/settingsNotifications'
+import { SettingsDevices } from './settings/settingsDevices'
+import { SettingsOrganizations } from './settings/settingsOrganizations'
 
 export class Settings extends React.Component {
     state = {

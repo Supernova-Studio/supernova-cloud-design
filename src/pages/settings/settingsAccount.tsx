@@ -1,9 +1,9 @@
 // Imports
 import * as React from 'react'
 
-import { Button } from './../components/button'
-import { FormPersonal } from './../components/FormPersonal'
-import { FormOrg } from './../components/FormOrg'
+import { Button } from './../../components/button'
+import { FormPersonal } from './../../components/FormPersonal'
+import { FormOrg } from './../../components/FormOrg'
 
 type SettingsAccountProps = {
     isPersonal: boolean;
@@ -27,7 +27,7 @@ export class SettingsAccount extends React.PureComponent<SettingsAccountProps, {
                         <div className="settings__avatar">
                             <h3 className="text--small">{this.props.isPersonal ? 'Profile picture' : 'Company Logo'}</h3>
 
-                            <img src={require('../images/avatar-jiri-big.png')} alt="Avatar image" />
+                            <img src={require('./../../images/avatar-jiri-big.png')} alt="Avatar image" />
 
                             <div className="settings__avatar-btns">
                                 <Button label="Generate random" type="ghost" />

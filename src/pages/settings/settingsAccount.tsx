@@ -2,8 +2,8 @@
 import * as React from 'react'
 
 import { Button } from './../../components/button'
-import { FormPersonal } from './../../components/FormPersonal'
-import { FormOrg } from './../../components/FormOrg'
+import { FormPersonal } from './../../components/formPersonal'
+import { FormOrg } from './../../components/formOrg'
 
 type SettingsAccountProps = {
     isPersonal: boolean;

@@ -1,7 +1,7 @@
 // Imports
 import * as React from 'react'
 
-import { Button } from './../components/button'
+import { Button } from './button'
 
 type FormPersonalProps = {}
 

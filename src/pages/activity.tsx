@@ -1,7 +1,7 @@
 // Imports
 import * as React from 'react'
 
-import { CardActivityComments } from './../components/CardActivityComments'
+import { CardActivityComments } from './../components/cardActivityComments'
 import { CardActivityMember } from './../components/cardActivityMember'
 import { CardActivityProject } from './../components/cardActivityProject'
 import { Dropdown } from './../components/dropdown'

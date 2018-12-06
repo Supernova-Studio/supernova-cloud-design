@@ -12,7 +12,7 @@ export class SettingsDevices extends React.PureComponent<SettingsDevicesProps, {
 
                 <p className="form__note mb-2">List of devices connected with your account. You can register up to 2 devices for one account. When unlinked, Supernova will log you out from the unlinked device immediately.</p>
 
-                <div className="table">
+                <div className="table table--gray">
                     <div className="table__row">
                         <div className="table__cell">
                             <strong>Jiri's Mac, SN: 3*********DFED</strong>

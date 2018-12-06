@@ -14,7 +14,7 @@ export class SettingsOrganizations extends React.PureComponent<SettingsOrganizat
 
                 <p className="form__note mb-2">Organizations allow people to work together much more effectively by suggesting who to mention, providing quick ways to invite every team member at once, and allowing for complete management of access rights and licenses.</p>
 
-                <div className="table">
+                <div className="table table--gray">
                     <div className="table__row">
                         <div className="table__cell">
                             <img src={require('./../../images/avatar-supernova-big.png')} alt="Supernova" />

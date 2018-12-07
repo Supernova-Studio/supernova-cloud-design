@@ -36,6 +36,10 @@
         padding-right: 0;
     }
 
+    &:only-child {
+        width: 100%;
+    }
+
     &:not(:first-child) {
         align-items: flex-end;
     }
@@ -48,6 +52,18 @@
         display: block;
         width: 100%;
     }
+}
+
+.table__cell--centered {
+    text-align: center;
+}
+
+.table__cell--top {
+    justify-content: flex-start;
+}
+
+.table__cell--right {
+    text-align: right;
 }
 
 .table__cell-title {

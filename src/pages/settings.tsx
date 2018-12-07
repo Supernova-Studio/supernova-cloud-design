@@ -39,19 +39,21 @@ export class Settings extends React.Component {
                 </div>
 
                 <div className="page__body">
-                    <Sidebar pageActive={this.state.activePage} linkClickHandler={(event, pageComponent) => this.handleSidebarLinkClick(event, pageComponent)} isOrganization={false} />
+                    <div className="container">
+                        <Sidebar pageActive={this.state.activePage} linkClickHandler={(event, pageComponent) => this.handleSidebarLinkClick(event, pageComponent)} isOrganization={false} />
 
-                    {this.state.activePage === 'account' && <SettingsAccount isPersonal={true} />}
+                        {this.state.activePage === 'account' && <SettingsAccount isPersonal={true} />}
 
-                    {this.state.activePage === 'team' && <SettingsTeam />}
+                        {this.state.activePage === 'team' && <SettingsTeam />}
 
-                    {this.state.activePage === 'billing' && <SettingsBilling isPersonal={true} />}
+                        {this.state.activePage === 'billing' && <SettingsBilling isPersonal={true} />}
 
-                    {this.state.activePage === 'notifications' && <SettingsNotifications />}
+                        {this.state.activePage === 'notifications' && <SettingsNotifications />}
 
-                    {this.state.activePage === 'devices' && <SettingsDevices />}
+                        {this.state.activePage === 'devices' && <SettingsDevices />}
 
-                    {this.state.activePage === 'organizations' && <SettingsOrganizations />}
+                        {this.state.activePage === 'organizations' && <SettingsOrganizations />}
+                    </div>
                 </div>
             </div>
         )

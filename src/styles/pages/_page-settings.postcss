@@ -1,18 +1,26 @@
 /* Page - Settings */
 .page--settings {
-    & .page__body,
-    & .settings__content {
+    & .page__body .container,
+    & .settings__content:not(.settings__content--vertical) {
         display: flex;
         flex-direction: row;
     }
 
-    & .settings--devices,
-    & .settings--notifications {
-        flex-direction: column;
-    }
-
     & .page__body {
+        position: relative;
+        z-index: 1;
         flex-wrap: nowrap;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            content: '';
+            width: 50%;
+            height: 100%;
+            background-color: #f4f4f5;
+        }
     }
 
     & .h3 {
@@ -32,6 +40,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 32px;
+    background-color: #fff;
 }
 
 .settings__avatar {

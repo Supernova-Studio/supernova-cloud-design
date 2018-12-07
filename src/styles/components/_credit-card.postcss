@@ -1,0 +1,41 @@
+/* Fake credit card */
+.credit-card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 24px;
+    width: 278px;
+    height: 175px;
+    border-radius: var(--radius-small);
+    background-image: linear-gradient(to bottom, #4f5d6b, #465361);
+}
+
+.credit-card__brand,
+.credit-card__number {
+    color: #fff;
+}
+
+.credit-card__brand {
+    font-weight: 700;
+    text-align: right;
+}
+
+.credit-card__number,
+.credit-card__info div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.credit-card__info {
+    text-transform: uppercase;
+    color: #d8d8d8;
+}
+
+.credit-card__info div:first-child {
+    font-size: 8px;
+}
+
+.credit-card__info div:last-child {
+    font-size: 13px;
+}

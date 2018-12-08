@@ -19,7 +19,7 @@ export class Switch extends React.PureComponent<SwitchProps, {}> {
     // Render the app
     render() {
         return (<div className={`switch ${this.state.isEnabled ? 'switch--active' : 'switch--inactive'}`} onClick={this.handleSwitchClick}>
-            <div className="switch__thumb"></div>
+            <div className="switch__thumb" />
         </div>)
     }
 }

@@ -60,7 +60,7 @@ export class FormPersonal extends React.Component<FormPersonalProps, {}> {
                 <fieldset>
                     <label htmlFor="inputBio">Bio</label>
 
-                    <textarea name="inputBio" id="inputBio" onChange={this.handleInputChange} defaultValue={this.state.inputBio}></textarea>
+                    <textarea name="inputBio" id="inputBio" onChange={this.handleInputChange} defaultValue={this.state.inputBio} />
                 </fieldset>
 
                 <fieldset>

@@ -46,7 +46,7 @@ export class FormOrg extends React.Component<FormOrgProps, {}> {
                 <fieldset>
                     <label htmlFor="inputDescription">Description</label>
 
-                    <textarea name="inputDescription" id="inputDescription" onChange={this.handleInputChange} defaultValue={this.state.inputDescription}></textarea>
+                    <textarea name="inputDescription" id="inputDescription" onChange={this.handleInputChange} defaultValue={this.state.inputDescription} />
                 </fieldset>
 
                 <fieldset>

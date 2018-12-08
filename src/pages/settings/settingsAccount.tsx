@@ -43,7 +43,7 @@ export class SettingsAccount extends React.PureComponent<SettingsAccountProps, {
                                         <div className="input-group input--color-picker">
                                             <input type="text" />
 
-                                            <div></div>
+                                            <div />
                                         </div>
 
                                         <Button label="Update" type="ghost" />

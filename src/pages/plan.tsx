@@ -1,7 +1,9 @@
 // Imports
 import * as React from 'react'
 
+import { PlanPayment } from 'src/pages/plans/plan-payment'
 import { PlanSelection } from 'src/pages/plans/plan-selection'
+import { PlanSuccess } from 'src/pages/plans/plan-success'
 
 import { PricingPlan } from 'src/components/pricing-plan'
 import { Switch } from 'src/components/switch'
@@ -43,7 +45,11 @@ export class Plan extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-7">
-                                {this.state.activePage === 'PlanSelection' && <PlanSelection />}
+                                {window.location.href.indexOf('/plan#payment') != -1 && <PlanPayment />}
+
+                                {window.location.href.indexOf('/plan#success') != -1 && <PlanSuccess />}
+
+                                {window.location.href.indexOf('/plan') != -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1 && <PlanSelection />}
                             </div>
 
 

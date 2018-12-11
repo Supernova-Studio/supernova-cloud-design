@@ -80,7 +80,7 @@ export class PricingPlan extends React.PureComponent<PricingPlanProps, {}> {
                 break
         }
 
-        return <span className={`plan__icon icon-${icon}`} />
+        return <span className={`plan__icon icon icon--${icon}`} />
     }
 
     generatePrice = () => {
@@ -110,7 +110,7 @@ export class PricingPlan extends React.PureComponent<PricingPlanProps, {}> {
     // Render the app
     render() {
         return (
-            <div className={`plan${this.props.isPopular && ' plan--popular'} ${this.props.isVertical ? 'plan--vertical' : 'plan--horizontal'}`}>
+            <div className={`plan${this.props.isPopular ? ' plan--popular' : ''} ${this.props.isVertical ? 'plan--vertical' : 'plan--horizontal'}`}>
                 <div className="plan__head">
                     {this.generateIcon()}
                 </div>

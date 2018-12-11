@@ -44,7 +44,7 @@ export class Plan extends React.Component {
                 <div className="page__body">
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-7">
+                            <div className="col-md-9">
                                 {window.location.href.indexOf('/plan#payment') != -1 && <PlanPayment />}
 
                                 {window.location.href.indexOf('/plan#success') != -1 && <PlanSuccess />}
@@ -52,8 +52,7 @@ export class Plan extends React.Component {
                                 {window.location.href.indexOf('/plan') != -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1 && <PlanSelection />}
                             </div>
 
-
-                            <div className="col-md-5">
+                            <div className="col-md-3">
                                 <Switch enabled={this.state.isYearly} />
 
                                 <PricingPlan isYearly={this.state.isYearly} isPopular={true} type="Code" isVertical={true} />

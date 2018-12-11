@@ -66,6 +66,7 @@
     width: 100%;
 }
 
+/* Plan - horizontal */
 .plan--horizontal {
     flex-flow: row nowrap;
 }
@@ -89,6 +90,7 @@
     text-align: right;
 }
 
+/* Plan - popular */
 .plan--popular {
     border: 1px solid var(--color-blue-vivid);
 }
@@ -102,6 +104,81 @@
     filter: invert(100%) grayscale(100%) brightness(100);
 }
 
+/* Plan - vertical */
 .plan--vertical {
     flex-flow: column wrap;
+    border: 1px solid var(--color-blue-vivid);
+
+    & .plan__head {
+        text-align: center;
+        color: #fff;
+        background-color: var(--color-blue-vivid);
+    }
+
+    & .plan__title,
+    & .plan__price {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    & .plan__icon {
+        margin-bottom: 28px;
+        height: 24px;
+        background-size: contain;
+        background-position: center;
+        filter: invert(100%) grayscale(100%) brightness(100);
+    }
+
+    & .plan__subtitle {
+        margin-top: 8px;
+        margin-bottom: 40px;
+    }
+
+    & .plan__period {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    & .plan__save-note {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    & .plan__features {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    & .plan__body {
+        padding-right: 42px;
+        padding-bottom: 0;
+        padding-left: 42px;
+    }
+
+    & .plan__body + .plan__footer {
+        padding-top: 40px;
+    }
+
+    & li {
+        position: relative;
+        padding-left: 18px;
+
+        &::before {
+            position: absolute;
+            top: 6px;
+            left: 0;
+            display: block;
+            content: '';
+            width: 5px;
+            height: 8px;
+            border: solid var(--color-blue-vivid);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        & + li {
+            margin-top: 12px;
+        }
+    }
 }

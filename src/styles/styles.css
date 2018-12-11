@@ -15,6 +15,7 @@
 @import 'components/_nav-filter.postcss';
 @import 'components/_nav.postcss';
 @import 'components/_notifications.postcss';
+@import 'components/_pricing-plans.postcss';
 @import 'components/_sidebar.postcss';
 @import 'components/_slider.postcss';
 @import 'components/_switch.postcss';

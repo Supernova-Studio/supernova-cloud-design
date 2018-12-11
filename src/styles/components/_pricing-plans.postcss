@@ -1,0 +1,107 @@
+/* Pricing plans */
+.plan {
+    display: flex;
+    font-family: var(--ff-lato);
+    border: 1px solid rgba(35, 36, 43, .2);
+    border-radius: var(--radius-small);
+    overflow: hidden;
+
+    & + .plan {
+        margin-top: 8px;
+    }
+}
+
+.plan__head,
+.plan__body,
+.plan__footer {
+    padding: 32px;
+}
+
+.plan__head {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan__icon {
+    width: 100%;
+    max-width: 72px;
+    height: 100%;
+    max-height: 40px;
+}
+
+.plan__title,
+.plan__subtitle,
+.plan__price {
+    font-weight: 700;
+}
+
+.plan__title,
+.plan__price {
+    font-size: 20px;
+}
+
+.plan__subtitle,
+.plan__description,
+.plan__period {
+    font-size: 14px;
+}
+
+.plan__title {
+    margin-top: 0;
+}
+
+.plan__title + .plan__subtitle,
+.plan__subtitle + .plan__description,
+.plan__price + .plan__period {
+    margin-top: 8px;
+}
+
+.plan__period + .btn {
+    margin-top: 16px;
+}
+
+.plan__footer .btn {
+    width: 100%;
+}
+
+.plan--horizontal {
+    flex-flow: row nowrap;
+}
+
+.plan--horizontal .plan__head {
+    width: 136px;
+    /* height: 156px; */
+}
+
+.plan--horizontal .plan__body {
+    width: calc(100% - (136px + 212px));
+}
+
+.plan--horizontal .plan__footer {
+    width: 212px;
+}
+
+.plan--horizontal .plan__price,
+.plan--horizontal .plan__period {
+    display: block;
+    text-align: right;
+}
+
+.plan--popular {
+    border: 1px solid var(--color-blue-vivid);
+}
+
+.plan--popular .plan__head {
+    color: #fff;
+    background-color: var(--color-blue-vivid);
+}
+
+.plan--popular .plan__icon {
+    filter: invert(100%) grayscale(100%) brightness(100);
+}
+
+.plan--vertical {
+    flex-flow: column wrap;
+}

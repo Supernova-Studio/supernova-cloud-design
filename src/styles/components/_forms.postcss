@@ -15,12 +15,16 @@ fieldset {
     border: 0;
 }
 
-fieldset + fieldset {
+fieldset + fieldset,
+fieldset + .row,
+.row + fieldset,
+fieldset .row + .row {
     margin-top: 24px;
 }
 
 input,
 label,
+select,
 textarea,
 .form__note {
     color: var(--color-blue-dark);
@@ -35,7 +39,9 @@ label {
 }
 
 label + input,
-label + textarea {
+label + select,
+label + textarea,
+label + .row {
     margin-top: 8px;
 }
 
@@ -46,6 +52,7 @@ textarea,
 }
 
 input,
+select,
 textarea {
     padding: 10px;
     width: 100%;
@@ -60,8 +67,17 @@ textarea {
     }
 }
 
+input,
+textarea {
+    font-size: 16px;
+}
+
 input[disabled] {
     background-color: #f4f4f5;
+}
+
+select {
+    font-size: 14px;
 }
 
 textarea {

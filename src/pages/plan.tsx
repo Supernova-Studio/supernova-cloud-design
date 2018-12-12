@@ -40,11 +40,11 @@ export class Plan extends React.Component {
         } else if (window.location.href.indexOf('/plan') != -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1) {
             return pageTitle = (
                 <React.Fragment>
-                    <h2 className="h3">Upgrade from Free to Ultimate</h2>
+                    <h2 className="h3">Personal Plan</h2>
 
-                    <p className="form__note">You are about to upgrade to an <strong>Ultimate Plan</strong></p>
+                    <p className="form__note">You are currently on a <strong>Free plan</strong>.</p>
 
-                    <p className="form__note mb-0">The Ultimate plan gives you access to all of the Cloud, Prototyping and Hand-off tools available in Supernova. Good choice!</p>
+                    <p className="form__note mb-0">Upgrade to get access to all features that will save you a ton of time, such as CodeX, Cloud and more!</p>
                 </React.Fragment>
             )
         }
@@ -100,7 +100,7 @@ export class Plan extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="row mt-1">
+                            <div className="row mt-2">
                                 <div className="col-md-9">
                                     {window.location.href.indexOf('/plan#payment') != -1 && <PlanPayment />}
 

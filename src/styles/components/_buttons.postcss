@@ -1,10 +1,20 @@
 /* Buttons */
+button
+.btn {
+    &:not([disabled]) {
+        cursor: pointer;
+    }
+}
+
 button {
     padding: 0;
     margin: 0;
     background: transparent;
     border: 0;
-    cursor: pointer;
+}
+
+button[disabled] {
+    opacity: .5;
 }
 
 .btn {
@@ -24,7 +34,6 @@ button {
     vertical-align: middle;
     white-space: nowrap;
     border-radius: 3px;
-    cursor: pointer;
     transition: all var(--tran-duration) var(--tran-timing);
     user-select: none;
 }
@@ -52,8 +61,8 @@ button {
     background-color: var(--color-blue-vivid) !important;
     border: 1px solid var(--color-blue-vivid) !important;
 
-    &:focus,
-    &:hover {
+    &:focus:not([disabled]),
+    &:hover:not([disabled]) {
         &,
         & a {
             color: #fff !important;
@@ -72,8 +81,8 @@ button {
 
     border: 1px solid var(--color-blue-vivid) !important;
 
-    &:focus,
-    &:hover {
+    &:focus:not([disabled]),
+    &:hover:not([disabled]) {
         &,
         & a {
             color: #fff !important;

@@ -24,7 +24,7 @@ export class Plan extends React.Component {
 
                     <p className="form__note">You are about to upgrade to an <strong>Ultimate Plan</strong></p>
 
-                    <p className="form__note">The Ultimate plan gives you access to all of the Cloud, Prototyping and Hand-off tools available in Supernova. Good choice!</p>
+                    <p className="form__note mb-0">The Ultimate plan gives you access to all of the Cloud, Prototyping and Hand-off tools available in Supernova. Good choice!</p>
                 </React.Fragment>
             )
         } else if (window.location.href.indexOf('/plan#success') != -1) {
@@ -34,7 +34,7 @@ export class Plan extends React.Component {
 
                     <p className="form__note">Your account has been successfully upgraded to <strong>Ultimate</strong>.</p>
 
-                    <p className="form__note">Here are some resources that will help you master Supernova in no time. Or return to Cloud.</p>
+                    <p className="form__note mb-0">Here are some resources that will help you master Supernova in no time. Or return to Cloud.</p>
                 </React.Fragment>
             )
         } else if (window.location.href.indexOf('/plan') != -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1) {
@@ -44,7 +44,7 @@ export class Plan extends React.Component {
 
                     <p className="form__note">You are about to upgrade to an <strong>Ultimate Plan</strong></p>
 
-                    <p className="form__note">The Ultimate plan gives you access to all of the Cloud, Prototyping and Hand-off tools available in Supernova. Good choice!</p>
+                    <p className="form__note mb-0">The Ultimate plan gives you access to all of the Cloud, Prototyping and Hand-off tools available in Supernova. Good choice!</p>
                 </React.Fragment>
             )
         }
@@ -82,16 +82,22 @@ export class Plan extends React.Component {
                 <div className="page__body">
                     <div className="container">
                         <div className="settings__content">
-                            {this.generatePageTitle()}
+                            <div className="row align-items-end">
+                                <div className="col-md-9">
+                                    {this.generatePageTitle()}
+                                </div>
 
-                            <div className={`switch__wrapper switch__wrapper${this.state.isYearly ? '--disabled' : '--enabled'}`}>
-                                <span className="switch__note">Save 20%</span>
+                                <div className="col-md-3">
+                                    <div className={`switch__wrapper switch__wrapper${this.state.isYearly ? '--disabled' : '--enabled'}`}>
+                                        <span className="switch__note">Save 20%</span>
 
-                                <span className="switch__label switch__label--left">Billed monthly</span>
+                                        <span className="switch__label switch__label--left">Billed monthly</span>
 
-                                <Switch enabled={this.state.isYearly} />
+                                        <Switch enabled={this.state.isYearly} />
 
-                                <span className="switch__label switch__label--right">Billed yearly</span>
+                                        <span className="switch__label switch__label--right">Billed yearly</span>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="row mt-1">

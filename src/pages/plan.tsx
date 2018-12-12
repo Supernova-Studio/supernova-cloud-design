@@ -21,7 +21,7 @@ export class Plan extends React.Component {
         if (window.location.href.indexOf('/plan#payment')  != -1) {
             return pageTitle = (
                 <React.Fragment>
-                    <h2 className="h3">Upgrade from Free to Ultimate</h2>
+                    <h2 className="h3">Upgrade from <strong>Free</strong> to <strong>Ultimate</strong></h2>
 
                     <p className="form__note mt-1">You are about to upgrade to an <strong>Ultimate Plan</strong></p>
 

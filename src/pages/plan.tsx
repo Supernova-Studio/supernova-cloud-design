@@ -1,10 +1,11 @@
 // Imports
 import * as React from 'react'
 
+// Subpages
 import { PlanPayment } from 'src/pages/plans/plan-payment'
 import { PlanSelection } from 'src/pages/plans/plan-selection'
-import { PlanSuccess } from 'src/pages/plans/plan-success'
 
+// Components
 import { PricingPlanVertical } from 'src/components/pricing-plan-vertical'
 import { Switch } from 'src/components/switch'
 
@@ -22,19 +23,9 @@ export class Plan extends React.Component {
                 <React.Fragment>
                     <h2 className="h3">Upgrade from Free to Ultimate</h2>
 
-                    <p className="form__note">You are about to upgrade to an <strong>Ultimate Plan</strong></p>
+                    <p className="form__note mt-1">You are about to upgrade to an <strong>Ultimate Plan</strong></p>
 
                     <p className="form__note mb-0">The Ultimate plan gives you access to all of the Cloud, Prototyping and Hand-off tools available in Supernova. Good choice!</p>
-                </React.Fragment>
-            )
-        } else if (window.location.href.indexOf('/plan#success') != -1) {
-            return pageTitle = (
-                <React.Fragment>
-                    <h2 className="h3">All set! Time to build pixel-perfect apps with Supernova!</h2>
-
-                    <p className="form__note">Your account has been successfully upgraded to <strong>Ultimate</strong>.</p>
-
-                    <p className="form__note mb-0">Here are some resources that will help you master Supernova in no time. Or return to Cloud.</p>
                 </React.Fragment>
             )
         } else if (window.location.href.indexOf('/plan') != -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1) {
@@ -42,7 +33,7 @@ export class Plan extends React.Component {
                 <React.Fragment>
                     <h2 className="h3">Personal Plan</h2>
 
-                    <p className="form__note">You are currently on a <strong>Free plan</strong>.</p>
+                    <p className="form__note mt-1">You are currently on a <strong>Free plan</strong>.</p>
 
                     <p className="form__note mb-0">Upgrade to get access to all features that will save you a ton of time, such as CodeX, Cloud and more!</p>
                 </React.Fragment>
@@ -103,8 +94,6 @@ export class Plan extends React.Component {
                             <div className="row mt-2">
                                 <div className="col-md-9">
                                     {window.location.href.indexOf('/plan#payment') != -1 && <PlanPayment />}
-
-                                    {window.location.href.indexOf('/plan#success') != -1 && <PlanSuccess />}
 
                                     {window.location.href.indexOf('/plan') != -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1 && <PlanSelection />}
                                 </div>

@@ -1,0 +1,87 @@
+/* Page - Plan - Success */
+.success__boxes {
+    justify-content: space-between;
+}
+
+.success__box {
+    display: block;
+    padding: 40px 22px;
+    font-family: var(--ff-lato);
+    text-align: center;
+    color: var(--color-blue-dark);
+    border: 1px solid var(--color-blue-vivid);
+    border-radius: var(--radius-small);
+    transition: var(--tran-full);
+
+    &:focus,
+    &:hover {
+        color: #fff;
+        background-color: var(--color-blue-vivid);
+
+        & .icon {
+            filter: grayscale(100) brightness(110);
+        }
+    }
+
+    & .icon--book {
+        width: 52px;
+    }
+
+    & .icon--download {
+        width: 40px;
+    }
+
+    & .icon--education {
+        width: 64px;
+    }
+
+    & .icon--hashtag {
+        width: 48px;
+    }
+}
+
+@media (min-width: 768px) {
+    .success__box {
+        flex: 0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .success__box {
+        &:nth-of-type(n + 3) {
+            margin-top: 26px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .success__box {
+        flex: 0 0 calc(25% - 15px);
+        max-width: calc(25% - 15px);
+    }
+}
+
+@media (max-width: 767px) {
+    .success__box {
+        &:nth-of-type(n + 2) {
+            margin-top: 26px;
+        }
+    }
+}
+
+.success__box-icon {
+    height: 48px;
+}
+
+.success__box-heading {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.success__box-slug {
+    font-size: 14px;
+    font-weight: 300;
+}

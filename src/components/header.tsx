@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 // Dashboard header implementation
 export class Header extends React.Component {
     state = {
+        isFree: false,
         isProfileMenuOpened: false
     }
 
@@ -43,8 +44,12 @@ export class Header extends React.Component {
 
                         <ul className="nav--right">
                             <li>
-                                <a className="link--blue nav-link">Download Studio</a>
+                                <a className="link--blue nav-link" href="#">Download Studio</a>
                             </li>
+
+                            {this.state.isFree && <li>
+                                <a className="link--blue nav-link" href="#">Upgrade to Pro</a>
+                            </li>}
 
                             <li className="dropdown__container hide-md-down">
                                 <a className="nav-link link--user dropdown__toggler" href="profile.html" onClick={this.handleProfileMenuToggle}>AD <span>{String.fromCharCode(9662)}</span></a>

@@ -12,6 +12,7 @@
 @import 'components/_forms.postcss';
 @import 'components/_header.postcss';
 @import 'components/_icons.postcss';
+@import 'components/_lists.postcss';
 @import 'components/_nav-filter.postcss';
 @import 'components/_nav.postcss';
 @import 'components/_notifications.postcss';
@@ -23,6 +24,7 @@
 
 /* Pages */
 @import 'pages/_page-activity.postcss';
+@import 'pages/_page-plan-success.postcss';
 @import 'pages/_page-project-details.postcss';
 @import 'pages/_page-settings.postcss';
 

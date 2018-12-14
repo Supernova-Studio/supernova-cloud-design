@@ -9,6 +9,7 @@ Modal.setAppElement('#root')
 
 export class Organization extends React.Component {
     state = {
+        isFewMessageVisible: false,
         isMemberOfOrg: true,
         isModalInviteOpen: false
     }
@@ -112,6 +113,14 @@ export class Organization extends React.Component {
                                     <div className="table">
                                         {this.generateOrgTable()}
                                     </div>
+
+                                    {this.state.isFewMessageVisible && (
+                                        <div className="mt-4 text--center">
+                                            <h3 className="h4">Missing someone?</h3>
+
+                                            <a href="#" className="link--blue text--bold">Invite more team members</a>
+                                        </div>
+                                    )}
                                 </React.Fragment>
                             ) : (
                                 <div className="row justify-content-center mt-4">

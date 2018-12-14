@@ -14,6 +14,7 @@
 @import 'components/_header.postcss';
 @import 'components/_icons.postcss';
 @import 'components/_lists.postcss';
+@import 'components/_modal.postcss';
 @import 'components/_nav-filter.postcss';
 @import 'components/_nav.postcss';
 @import 'components/_notifications.postcss';

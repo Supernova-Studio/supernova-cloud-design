@@ -46,6 +46,7 @@
 
     & .icon {
         margin-right: 8px;
+        height: 16px;
     }
 }
 
@@ -56,6 +57,8 @@
 }
 
 .table__row-active {
+    padding-right: 2px;
+    padding-left: 24px;
     background-color: rgba(0, 140, 235, .2);
     border: 1px solid var(--color-blue-vivid);
     border-radius: var(--radius-small);
@@ -81,10 +84,16 @@
     }
 }
 
-.organization-page__name {
+.organization-page__logo + .organization-page__name {
     margin-top: 24px;
-    margin-bottom: 6px;
+}
+
+.organization-page__name {
     font-size: 32px;
+}
+
+.organization-page__name + .organization-page__size {
+    margin-top: 6px;
 }
 
 .organization-page__size {

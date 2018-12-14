@@ -2,8 +2,13 @@
 import * as React from 'react'
 
 import { Button } from 'src/components/button'
+import { EmptyMessageOrg } from 'src/components/empty-message-org'
 
 export class Organization extends React.Component {
+    state = {
+        isMemberOfOrg: true
+    }
+
     handleRowClick = (event) => {
         event.currentTarget.classList.toggle('table__row-active')
     }
@@ -54,47 +59,58 @@ export class Organization extends React.Component {
             <div className="page--organization">
                 <div className="page__title">
                     <div className="container">
-                        <div className="organization-page__logo">
+                        {this.state.isMemberOfOrg && <div className="organization-page__logo">
                             <img src={require('src/images/logo-star-laboratories.png')} alt=""/>
-                        </div>
+                        </div>}
 
                         <h1 className="h2 organization-page__name">Organization</h1>
 
-                        <p className="organization-page__size">40 Members</p>
+                        {this.state.isMemberOfOrg && <p className="organization-page__size">40 Members</p>}
                     </div>
                 </div>
 
                 <div className="settings__content">
                     <div className="container">
-                        <div className="organization__filter">
-                            <ul className="list--inline">
-                                <li>
-                                    <a className="link--blue" href="#"><span className="icon icon--person"></span> Assign Role (3)</a>
-                                </li>
+                        {this.state.isMemberOfOrg ? (
+                                <React.Fragment>
+                                    <div className="organization__filter">
+                                        <ul className="list--inline">
+                                            <li>
+                                                <a className="link--blue" href="#"><span className="icon icon--person"></span> Assign Role (3)</a>
+                                            </li>
 
-                                <li>
-                                    <a className="link--blue" href="#"><span className="icon icon--team"></span> Assign Group (3)</a>
-                                </li>
+                                            <li>
+                                                <a className="link--blue" href="#"><span className="icon icon--persons"></span> Assign Group (3)</a>
+                                            </li>
 
-                                <li>
-                                    <a className="link--blue" href="#"><span className="icon icon--trash"></span> Remove (3)</a>
-                                </li>
-                            </ul>
+                                            <li>
+                                                <a className="link--blue" href="#"><span className="icon icon--trash-can"></span> Remove (3)</a>
+                                            </li>
+                                        </ul>
 
-                            <ul className="list--inline">
-                                <li>
-                                    <a className="link--blue" href="#">Pending Invitations (1)</a>
-                                </li>
+                                        <ul className="list--inline">
+                                            <li>
+                                                <a className="link--blue" href="#">Pending Invitations (1)</a>
+                                            </li>
 
-                                <li>
-                                    <Button label="Invite Members" type="primary" />
-                                </li>
-                            </ul>
-                        </div>
+                                            <li>
+                                                <Button label="Invite Members" type="primary" />
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                        <div className="table">
-                            {this.generateOrgTable()}
-                        </div>
+                                    <div className="table">
+                                        {this.generateOrgTable()}
+                                    </div>
+                                </React.Fragment>
+                            ) : (
+                                <div className="row justify-content-center mt-4">
+                                    <div className="col-md-10 col-lg-8 text--center">
+                                        <EmptyMessageOrg />
+                                    </div>
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>

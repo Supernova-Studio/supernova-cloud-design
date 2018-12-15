@@ -9,6 +9,7 @@ Modal.setAppElement('#root')
 
 export class Organization extends React.Component {
     state = {
+        modalRole: 'admin',
         isFewMessageVisible: false,
         isMemberOfOrg: true,
         isModalInviteOpen: false
@@ -17,6 +18,12 @@ export class Organization extends React.Component {
     handleModal = () => {
         this.setState({
             isModalInviteOpen: !this.state.isModalInviteOpen
+        })
+    }
+
+    handleModalRoleChange = (event) => {
+        this.setState({
+            modalRole: event.target.value
         })
     }
 
@@ -63,6 +70,19 @@ export class Organization extends React.Component {
         }
 
         return tableContent
+    }
+
+    renderModalInfo = () => {
+        switch (this.state.modalRole) {
+            case 'admin':
+                return <p className="form__note">Administrators can add and remove organization members, create projects, and have access to all features of Supernova Ultimate.</p>
+
+            case 'client':
+                return <p className="form__note">Clients can explore and comment on your projects when invited but cannot become editors of the projects. They will not get a Supernova license.</p>
+
+            default:
+                return <p className="form__note">Team members cannot invite more people to your organization but have access to all features of Supernova Ultimate.</p>
+        }
     }
 
     render() {
@@ -144,11 +164,11 @@ export class Organization extends React.Component {
                         <div className="modal__header">Invite</div>
 
                         <div className="modal__body">
-                            <div className="row align-items-center">
+                            <div className="row align-items-center mb-1">
                                 <div className="col-md-6">Invite as</div>
 
                                 <div className="col-md-6">
-                                    <select id="tableOrgSelect" name="tableOrgSelect" defaultValue="Owner">
+                                    <select id="tableOrgSelect" name="tableOrgSelect" defaultValue="Owner" onChange={this.handleModalRoleChange}>
                                         <option value="admin">Admin</option>
                                         <option value="client">Client</option>
                                         <option value="member">Member</option>
@@ -156,10 +176,10 @@ export class Organization extends React.Component {
                                 </div>
                             </div>
 
-                            <p className="form__note mt-1 mb-2">Administrators can add and remove organization members, create projects, and have access to all features of Supernova Ultimate.</p>
+                            {this.renderModalInfo()}
 
                             <div>
-                                <label htmlFor="inviteEmailAddresses">Email Addresses <span>Separated by commas</span></label>
+                                <label className="d-flex justify-content-between" htmlFor="inviteEmailAddresses">Email Addresses <span className="text--gray">Separated by commas</span></label>
 
                                 <textarea name="inviteEmailAddresses" id="inviteEmailAddresses" />
                             </div>
@@ -167,42 +187,49 @@ export class Organization extends React.Component {
 
                         <div className="modal__table table table--default">
                             <div className="table__row">
-                                <div className="table__cell table__cell--left col-8 justify-content-start">
+                                <div className={`table__cell table__cell--left${this.state.modalRole !== 'client' ? 'col-8 justify-content-start' : ''}`}>
                                     <strong className="table__cell-title">Organization seats</strong>
 
-                                    <p className="table__cell-text">0 seats available</p>
+                                    {this.state.modalRole !== 'client' ? (
+                                            <p className="table__cell-text">0 seats available</p>
+                                        ) : (
+                                            <p className="table__cell-text">Clients of organizations are considered free users and don’t take up organization seats.</p>
+                                        )
+                                    }
                                 </div>
 
-                                <div className="table__cell table__cell--right col-4">
+                                {this.state.modalRole !== 'client' && <div className="table__cell table__cell--right col-4">
                                     <strong>Add additional seats</strong>
 
                                     <input type="number" />
-                                </div>
+                                </div>}
                             </div>
 
-                            <div className="table__row">
-                                <div className="table__cell table__cell--left">
-                                    <strong className="table__cell-title">One-time adjustment charge</strong>
+                            {this.state.modalRole !== 'client' && <React.Fragment>
+                                <div className="table__row">
+                                    <div className="table__cell table__cell--left">
+                                        <strong className="table__cell-title">One-time adjustment charge</strong>
 
-                                    <p className="table__cell-text">Difference between new and current plan (charged immediately)</p>
+                                        <p className="table__cell-text">Difference between new and current plan (charged immediately)</p>
+                                    </div>
+
+                                    <div className="table__cell table__cell--right justify-content-start">
+                                        <strong>{String.fromCharCode(36)}39.95</strong>
+                                    </div>
                                 </div>
 
-                                <div className="table__cell table__cell--right">
-                                    <strong>{String.fromCharCode(36)}39.95</strong>
-                                </div>
-                            </div>
+                                <div className="table__row">
+                                    <div className="table__cell table__cell--left">
+                                        <strong className="table__cell-title">Additional cost per month</strong>
 
-                            <div className="table__row">
-                                <div className="table__cell table__cell--left">
-                                    <strong className="table__cell-title">Additional cost per month</strong>
+                                        <p className="table__cell-text">Your next payment (yearly) is on Nov. 26, 2018</p>
+                                    </div>
 
-                                    <p className="table__cell-text">Your next payment (yearly) is on Nov. 26, 2018</p>
+                                    <div className="table__cell table__cell--right justify-content-start">
+                                        <strong>{String.fromCharCode(36)}100.00</strong>
+                                    </div>
                                 </div>
-
-                                <div className="table__cell table__cell--right">
-                                    <strong>{String.fromCharCode(36)}100.00</strong>
-                                </div>
-                            </div>
+                            </React.Fragment>}
                         </div>
 
                         <div className="modal__footer">

@@ -1,16 +1,25 @@
 /* Modal */
-.ReactModal__Overlay {
-    background-color: rgba(0, 0, 0, .5) !important;
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
 }
 
-.ReactModal__Content {
-    top: 50% !important;
-    bottom: initial !important;
-    left: 50% !important;
-    padding: 0 !important;
+.modal__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: auto;
+    width: 100%;
     max-width: 580px;
     font-family: var(--ff-lato);
-    border: 0 !important;
+    background: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 4px;
+    outline: none;
     transform: translate(-50%, -50%);
 }
 

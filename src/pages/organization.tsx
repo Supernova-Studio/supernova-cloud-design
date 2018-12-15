@@ -133,9 +133,12 @@ export class Organization extends React.Component {
                     </div>
 
                     <Modal
+                        className="modal__content"
                         contentLabel="Invite"
                         isOpen={this.state.isModalInviteOpen}
                         onRequestClose={this.handleModal}
+                        overlayClassName="modal__overlay"
+                        portalClassName="modal__portal"
                         shouldCloseOnOverlayClick={true}
                     >
                         <div className="modal__header">Invite</div>
@@ -164,13 +167,13 @@ export class Organization extends React.Component {
 
                         <div className="modal__table table table--default">
                             <div className="table__row">
-                                <div className="table__cell table__cell--left">
+                                <div className="table__cell table__cell--left col-8 justify-content-start">
                                     <strong className="table__cell-title">Organization seats</strong>
 
                                     <p className="table__cell-text">0 seats available</p>
                                 </div>
 
-                                <div className="table__cell table__cell--right">
+                                <div className="table__cell table__cell--right col-4">
                                     <strong>Add additional seats</strong>
 
                                     <input type="number" />

@@ -13,6 +13,7 @@ import { Projects } from './pages/projects'
 import { ProjectDetails } from './pages/project-details'
 import { Organization } from './pages/organization'
 import { Settings } from './pages/settings'
+import { SignIn } from './pages/sign-in'
 
 import { Header } from './components/header'
 
@@ -35,6 +36,7 @@ class App extends React.Component {
                     <Route path="/plan" component={Plan} />
                     <Route path="/plan-success" component={PlanSuccess} />
                     <Route path="/settings" component={Settings} />
+                    <Route path="/sign-in" component={SignIn} />
                 </React.Fragment>
             </BrowserRouter>
         )

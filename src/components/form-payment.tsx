@@ -108,7 +108,7 @@ export class FormPayment extends React.Component<FormPaymentProps, {}> {
                 <fieldset>
                     <div className="row">
                         <div className="col-md-9">
-                            <p className="mb-0 d-flex text--small text--blue-light"><span className="icon icon--lock" style={{marginRight: '8px', width: '11px', height: '16px'}}></span> Secure credit card payment</p>
+                            <p className="mb-0 d-flex text--small text--blue-light"><span className="icon icon--lock" style={{marginRight: '8px', width: '11px', height: '16px'}} /> Secure credit card payment</p>
 
                             <p className="mb-0 text--small text--gray">Secured using 128-bit SSL encrypted channel</p>
                         </div>

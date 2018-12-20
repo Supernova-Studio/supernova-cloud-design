@@ -5,11 +5,19 @@
 Just use following command and watch the magic happen.
 
 ```
-yarn start
+# for Windows
+yarn start:w
+
+# for OSX
+yarn start:o
 ```
 
 or
 
 ```
-npm run start
+# for Windows
+npm run start:w
+
+# for OSX
+npm run start:o
 ```

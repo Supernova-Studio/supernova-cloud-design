@@ -153,7 +153,7 @@ export class Organization extends React.Component {
                     </div>
 
                     <Modal
-                        className="modal__content"
+                        className="modal"
                         contentLabel="Invite"
                         isOpen={this.state.isModalInviteOpen}
                         onRequestClose={this.handleModal}

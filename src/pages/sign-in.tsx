@@ -28,7 +28,7 @@ export class SignIn extends React.Component {
                                 <input id="inputPassword" name="inputPassword" type="password" />
 
                                 <div className="text--right">
-                                    <a className="modal__forgot link--blue" href="#">Forgot Password?</a>
+                                    <a className="form__forgot link--blue" href="#">Forgot Password?</a>
                                 </div>
                             </fieldset>
                         </div>
@@ -72,7 +72,7 @@ export class SignIn extends React.Component {
                                 <input id="inputPassword" name="inputPassword" type="password" />
 
                                 <div className="text--right">
-                                    <a className="modal__forgot link--blue" href="#">Forgot Password?</a>
+                                    <a className="form__forgot link--blue" href="#">Forgot Password?</a>
                                 </div>
                             </fieldset>
                         </div>
@@ -100,7 +100,7 @@ export class SignIn extends React.Component {
                 <div className="page__body">
                     <Modal
                         bodyOpenClassName="modal-sign-in-open"
-                        className="modal__content modal--sign-in"
+                        className="modal modal--sign-in"
                         contentLabel="Invite"
                         isOpen={true}
                         overlayClassName="modal__overlay"

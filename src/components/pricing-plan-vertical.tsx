@@ -23,26 +23,24 @@ export class PricingPlanVertical extends React.PureComponent<PricingPlanVertical
 
                             <span className="plan__price">{String.fromCharCode(36)}25 <span className="plan__period">{this.props.isYearly ? '/year' : '/month'}</span></span>
 
-
-
                             <span className="plan__save-note">Save $78 a year by paying annually.</span>
                         </div>
 
                         <div className="plan__body">
                             <ul className="plan__features">
-                                <li><span className="plan__feature-icon"></span> Full Prototyping Suite</li>
+                                <li><span className="plan__feature-icon" /> Full Prototyping Suite</li>
 
-                                <li><span className="plan__feature-icon"></span> Code Preview</li>
+                                <li><span className="plan__feature-icon" /> Code Preview</li>
 
-                                <li><span className="plan__feature-icon"></span> Unlimited Teams</li>
+                                <li><span className="plan__feature-icon" /> Unlimited Teams</li>
 
-                                <li><span className="plan__feature-icon"></span> 1 Cloud Project</li>
+                                <li><span className="plan__feature-icon" /> 1 Cloud Project</li>
 
-                                <li><span className="plan__feature-icon"></span> Export to iOS</li>
+                                <li><span className="plan__feature-icon" /> Export to iOS</li>
 
-                                <li><span className="plan__feature-icon"></span> Export to Android</li>
+                                <li><span className="plan__feature-icon" /> Export to Android</li>
 
-                                <li><span className="plan__feature-icon"></span> Export to React Native</li>
+                                <li><span className="plan__feature-icon" /> Export to React Native</li>
                             </ul>
                         </div>
 
@@ -64,22 +62,20 @@ export class PricingPlanVertical extends React.PureComponent<PricingPlanVertical
 
                             <span className="plan__price">{String.fromCharCode(36)}15 <span className="plan__period">{this.props.isYearly ? '/year' : '/month'}</span></span>
 
-
-
                             <span className="plan__save-note">Save $78 a year by paying annually.</span>
                         </div>
 
                         <div className="plan__body">
                             <ul className="plan__features">
-                                <li><span className="plan__feature-icon"></span> Full Prototyping Suite</li>
+                                <li><span className="plan__feature-icon" /> Full Prototyping Suite</li>
 
-                                <li><span className="plan__feature-icon"></span> Studio CodeX Preview</li>
+                                <li><span className="plan__feature-icon" /> Studio CodeX Preview</li>
 
-                                <li><span className="plan__feature-icon"></span> Cloud CodeX</li>
+                                <li><span className="plan__feature-icon" /> Cloud CodeX</li>
 
-                                <li><span className="plan__feature-icon"></span> Unlimited Teams</li>
+                                <li><span className="plan__feature-icon" /> Unlimited Teams</li>
 
-                                <li><span className="plan__feature-icon"></span> Unlimited Cloud Projects</li>
+                                <li><span className="plan__feature-icon" /> Unlimited Cloud Projects</li>
                             </ul>
                         </div>
 
@@ -106,21 +102,21 @@ export class PricingPlanVertical extends React.PureComponent<PricingPlanVertical
 
                         <div className="plan__body">
                             <ul className="plan__features">
-                                <li><span className="plan__feature-icon"></span> Full Prototyping Suite</li>
+                                <li><span className="plan__feature-icon" /> Full Prototyping Suite</li>
 
-                                <li><span className="plan__feature-icon"></span> Code Preview</li>
+                                <li><span className="plan__feature-icon" /> Code Preview</li>
 
-                                <li><span className="plan__feature-icon"></span> Unlimited Teams</li>
+                                <li><span className="plan__feature-icon" /> Unlimited Teams</li>
 
-                                <li><span className="plan__feature-icon"></span> Unlimited Cloud Projects</li>
+                                <li><span className="plan__feature-icon" /> Unlimited Cloud Projects</li>
 
-                                <li><span className="plan__feature-icon"></span> Export to iOS</li>
+                                <li><span className="plan__feature-icon" /> Export to iOS</li>
 
-                                <li><span className="plan__feature-icon"></span> Export to Android</li>
+                                <li><span className="plan__feature-icon" /> Export to Android</li>
 
-                                <li><span className="plan__feature-icon"></span> Export to React Native</li>
+                                <li><span className="plan__feature-icon" /> Export to React Native</li>
 
-                                <li><span className="plan__feature-icon"></span> Premium Support</li>
+                                <li><span className="plan__feature-icon" /> Premium Support</li>
                             </ul>
                         </div>
 
@@ -147,13 +143,13 @@ export class PricingPlanVertical extends React.PureComponent<PricingPlanVertical
 
                         <div className="plan__body">
                             <ul className="plan__features">
-                                <li><span className="plan__feature-icon"></span> Full Prototyping Suite</li>
+                                <li><span className="plan__feature-icon" /> Full Prototyping Suite</li>
 
-                                <li><span className="plan__feature-icon"></span> CodeX Preview</li>
+                                <li><span className="plan__feature-icon" /> CodeX Preview</li>
 
-                                <li><span className="plan__feature-icon"></span> Unlimited Teams</li>
+                                <li><span className="plan__feature-icon" /> Unlimited Teams</li>
 
-                                <li><span className="plan__feature-icon"></span> 1 Cloud Project</li>
+                                <li><span className="plan__feature-icon" /> 1 Cloud Project</li>
                             </ul>
                         </div>
 

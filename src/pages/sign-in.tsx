@@ -125,7 +125,7 @@ export class SignIn extends React.Component {
 
                             {this.state.isInvited ? (
                                     <h3 className="h4 text--bold mt-2 mb-1">You’ve been invited to “Spacebook”</h3>
-                                ): (
+                                ) : (
                                     <h3 className="h4 text--bold mt-2 mb-1">{this.state.isSignInShown ? 'Welcome back! Nice to see you.' : 'Sign up for Supernova Cloud'}</h3>
                                 )
                             }

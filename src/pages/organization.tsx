@@ -107,15 +107,15 @@ export class Organization extends React.Component {
                                     <div className="organization__filter">
                                         <ul className="list--inline">
                                             <li>
-                                                <a className="link--blue" href="#"><span className="icon icon--person"></span> Assign Role (3)</a>
+                                                <a className="link--blue" href="#"><span className="icon icon--person" /> Assign Role (3)</a>
                                             </li>
 
                                             <li>
-                                                <a className="link--blue" href="#"><span className="icon icon--persons"></span> Assign Group (3)</a>
+                                                <a className="link--blue" href="#"><span className="icon icon--persons" /> Assign Group (3)</a>
                                             </li>
 
                                             <li>
-                                                <a className="link--blue" href="#"><span className="icon icon--trash-can"></span> Remove (3)</a>
+                                                <a className="link--blue" href="#"><span className="icon icon--trash-can" /> Remove (3)</a>
                                             </li>
                                         </ul>
 

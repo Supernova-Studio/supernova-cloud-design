@@ -18,7 +18,7 @@ export class Plan extends React.Component {
     generatePageTitle = () => {
         let pageTitle
 
-        if (window.location.href.indexOf('/plan#payment')  != -1) {
+        if (window.location.href.indexOf('/plan#payment') !== -1) {
             return pageTitle = (
                 <React.Fragment>
                     <h2 className="h3">Upgrade from <strong>Free</strong> to <strong>Ultimate</strong></h2>
@@ -28,7 +28,7 @@ export class Plan extends React.Component {
                     <p className="form__note mb-0">The Ultimate plan gives you access to all of the Cloud, Prototyping and Hand-off tools available in Supernova. Good choice!</p>
                 </React.Fragment>
             )
-        } else if (window.location.href.indexOf('/plan') != -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1) {
+        } else if (window.location.href.indexOf('/plan') !== -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1) {
             return pageTitle = (
                 <React.Fragment>
                     <h2 className="h3">Personal Plan</h2>
@@ -93,9 +93,9 @@ export class Plan extends React.Component {
 
                             <div className="row mt-2">
                                 <div className="col-md-9">
-                                    {window.location.href.indexOf('/plan#payment') != -1 && <PlanPayment />}
+                                    {window.location.href.indexOf('/plan#payment') !== -1 && <PlanPayment />}
 
-                                    {window.location.href.indexOf('/plan') != -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1 && <PlanSelection />}
+                                    {window.location.href.indexOf('/plan') !== -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1 && <PlanSelection />}
                                 </div>
 
                                 <div className="col-md-3">

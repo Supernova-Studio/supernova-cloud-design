@@ -9,7 +9,7 @@ export class EmptyMessageOrg extends React.PureComponent<EmptyMessageOrgProps, {
     // Render the app
     render() {
         return (<div className="empty-message empty-message--org">
-            <span className="icon icon--building"></span>
+            <span className="icon icon--building" />
 
             <h2 className="h3">You aren’t part of an organization yet!</h2>
 

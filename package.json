@@ -18,7 +18,6 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts', 'src/**/*.tsx' -o tslint.log"
   },
   "dependencies": {
-    "moment": "2.22.2",
     "qrcode.react": "^0.8.0",
     "react": "16.7.0",
     "react-dom": "16.7.0",

@@ -3,10 +3,12 @@ import * as React from 'react'
 
 import { CardProject } from './../components/cardProject'
 import { Dropdown } from './../components/dropdown'
+import { EmptyMessageProjects } from 'src/components/empty-message-projects'
 
 export class Projects extends React.Component {
     state = {
         favoriteMode: false,
+        isProjectsPageEmpty: true,
         projectsMenuOpened: false,
         sortPopoverOpen: false
     }
@@ -101,7 +103,7 @@ export class Projects extends React.Component {
                 <div className="page__body body--projects">
                     <div className="container">
                         <div className="row project__row">
-                            {this.generateCards()}
+                            {this.state.isProjectsPageEmpty ? this.generateCards() : <EmptyMessageProjects />}
                         </div>
                     </div>
                 </div>

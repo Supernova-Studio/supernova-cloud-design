@@ -177,6 +177,16 @@
 
 /* Projects page */
 @media (max-width: 767px) {
+    .page--activity,
+    .page--projects {
+        & .filter__nav--right {
+            justify-content: center;
+            margin-top: 26px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
     .page--projects {
         & .filter__container {
             flex-flow: row wrap;
@@ -189,12 +199,6 @@
 
         & .filter__nav--middle {
             justify-content: flex-end;
-        }
-
-        & .filter__nav--right {
-            justify-content: center;
-            margin-top: 26px;
-            width: 100%;
         }
     }
 }

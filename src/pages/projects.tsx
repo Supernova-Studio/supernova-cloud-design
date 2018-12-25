@@ -51,7 +51,7 @@ export class Projects extends React.Component {
                     </div>
                 </div>
 
-                <div className="page__filter filter">
+                {this.state.isProjectsPageEmpty && <div className="page__filter filter">
                     <div className="container filter__container">
                         {/* Filter for mobile devices */}
                         <ul className="filter__nav filter__nav--mobile">
@@ -98,12 +98,12 @@ export class Projects extends React.Component {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div>}
 
                 <div className="page__body body--projects">
                     <div className="container">
-                        <div className="row project__row">
-                            {this.state.isProjectsPageEmpty ? this.generateCards() : <EmptyMessageProjects />}
+                        <div className={`row ${this.state.isProjectsPageEmpty ? 'justify-content-center' : ''} project__row`}>
+                            {this.state.isProjectsPageEmpty ? this.generateCards() : <div className="col-md-8 mt-3"><EmptyMessageProjects /></div>}
                         </div>
                     </div>
                 </div>

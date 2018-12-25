@@ -77,7 +77,7 @@ export class Projects extends React.Component {
                             <li><a className={this.state.favoriteMode ? 'link--active' : ''} href="#">Favorites</a></li>
                         </ul>
 
-                        <ul className="filter__nav filter__nav--desktop filter__nav--right">
+                        <ul className="filter__nav filter__nav--desktop filter__nav--middle">
                             <li>
                                 <Dropdown
                                     align="right"
@@ -85,10 +85,12 @@ export class Projects extends React.Component {
                                     hasDividers={true}
                                     isDropdownOpen={this.state.sortPopoverOpen}
                                     items={['Sort by name', 'Sort by newest', 'Sort by oldest']}
-                                    label={['Sort by ', <strong key="drp_str_0">Name</strong>, <span key="drp_str_1">{String.fromCharCode(9662)}</span>]}
+                                    label={['Sorted by ', <strong key="drp_str_0">Name</strong>, <span key="drp_str_1">{String.fromCharCode(9662)}</span>]}
                                 />
                             </li>
+                        </ul>
 
+                        <ul className="filter__nav filter__nav--desktop filter__nav--right">
                             <li>
                                 <input
                                     className="filter__input"

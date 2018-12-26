@@ -9,14 +9,7 @@ export class Projects extends React.Component {
     state = {
         favoriteMode: false,
         isProjectsPageEmpty: true,
-        projectsMenuOpened: false,
         sortPopoverOpen: false
-    }
-
-    handleProjectsMenuToggle = () => {
-        this.setState({
-            projectsMenuOpened: !this.state.projectsMenuOpened
-        })
     }
 
     handleSortPopupOpen = () => {
@@ -53,31 +46,13 @@ export class Projects extends React.Component {
 
                 {this.state.isProjectsPageEmpty && <div className="page__filter filter">
                     <div className="container filter__container">
-                        {/* Filter for mobile devices */}
-                        <ul className="filter__nav filter__nav--mobile">
-                            <li className="dropdown__container">
-                                <a className="dropdown__toggler" onClick={this.handleProjectsMenuToggle}>All projects <span>{String.fromCharCode(9662)}</span></a>
-
-                                <ul className={'dropdown__list dropdown__list--centered'  + (this.state.projectsMenuOpened ? ' dropdown__list--visible' : '')}>
-                                    <li className="dropdown__item">
-                                        <a className="dropdown__link">All projects</a>
-                                    </li>
-
-                                    <li className="dropdown__item">
-                                        <a className="dropdown__link">Favorites</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        {/* Filter for desktop devices */}
-                        <ul className="filter__nav filter__nav--desktop filter__nav--left">
+                        <ul className="filter__nav filter__nav--left">
                             <li><a className={this.state.favoriteMode ? '' : 'link--active'} href="#">All projects</a></li>
 
                             <li><a className={this.state.favoriteMode ? 'link--active' : ''} href="#">Favorites</a></li>
                         </ul>
 
-                        <ul className="filter__nav filter__nav--desktop filter__nav--middle">
+                        <ul className="filter__nav filter__nav--middle">
                             <li>
                                 <Dropdown
                                     align="right"
@@ -90,7 +65,7 @@ export class Projects extends React.Component {
                             </li>
                         </ul>
 
-                        <ul className="filter__nav filter__nav--desktop filter__nav--right">
+                        <ul className="filter__nav filter__nav--right">
                             <li>
                                 <input
                                     className="filter__input"

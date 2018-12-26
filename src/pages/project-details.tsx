@@ -42,7 +42,7 @@ export class ProjectDetails extends React.Component {
 
                 <div className="page__filter filter">
                     <div className="container filter__container">
-                        <ul className="filter__nav filter__nav--desktop filter__nav--left">
+                        <ul className="filter__nav filter__nav--left">
                             <li><a className="link--active" href="#">App screens</a></li>
 
                             <li><a href="#">Manage team</a></li>
@@ -62,7 +62,7 @@ export class ProjectDetails extends React.Component {
                             <img src={require('images/icons/icon-grid-small.svg')} alt="" />
                         </div>
 
-                        <ul className="filter__nav filter__nav--desktop filter__nav--right">
+                        <ul className="filter__nav filter__nav--right">
                             <li>
                                 <Dropdown
                                     align="right"

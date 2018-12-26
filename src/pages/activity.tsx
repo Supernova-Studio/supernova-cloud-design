@@ -28,31 +28,7 @@ export class Activity extends React.Component {
 
                 <div className="page__filter filter">
                     <div className="container filter__container">
-                        {/* Filter for mobile devices */}
-                        <ul className="filter__nav filter__nav--mobile">
-                            <li className="dropdown__container">
-                                <a className="dropdown__toggler" href="">
-                                    All events <span>{String.fromCharCode(9662)}</span>
-                                </a>
-
-                                <ul className={'dropdown__list dropdown__list--centered' + (this.state.isProjectsMenuOpened ? ' dropdown__list--visible' : '')}>
-                                    <li className="dropdown__item">
-                                        <a className="dropdown__link" href="">Messages</a>
-                                    </li>
-
-                                    <li className="dropdown__item">
-                                        <a className="dropdown__link" href="">Projects</a>
-                                    </li>
-
-                                    <li className="dropdown__item">
-                                        <a className="dropdown__link" href="">Team</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        {/* Filter for desktop devices */}
-                        <ul className="filter__nav filter__nav--desktop filter__nav--left">
+                        <ul className="filter__nav filter__nav--left">
                             <li>
                                 <a className="link--active" href="">All Events</a>
                             </li>
@@ -70,7 +46,7 @@ export class Activity extends React.Component {
                             </li>
                         </ul>
 
-                        <ul className="filter__nav filter__nav--desktop filter__nav--right">
+                        <ul className="filter__nav filter__nav--right">
                             <li>
                                 <Dropdown
                                     align="right"
@@ -78,7 +54,7 @@ export class Activity extends React.Component {
                                     hasDividers={true}
                                     isDropdownOpen={this.state.isProjectsMenuOpened}
                                     items={['Spacebook', 'Playbook', 'Comicbook']}
-                                    label={['Showing ', <strong key="drp_str_0">Spacebook</strong>, <span key="drp_str_1">{String.fromCharCode(9662)}</span>]}
+                                    label={['Showing: ', <strong key="drp_str_0">Spacebook</strong>, <span key="drp_str_1">{String.fromCharCode(9662)}</span>]}
                                 />
                             </li>
                         </ul>

@@ -130,8 +130,10 @@ export class Organization extends React.Component {
                                         </ul>
                                     </div>
 
-                                    <div className="table">
-                                        {this.generateOrgTable()}
+                                    <div className="table-wrapper">
+                                        <div className="table">
+                                            {this.generateOrgTable()}
+                                        </div>
                                     </div>
 
                                     {this.state.isFewMessageVisible && (
@@ -235,7 +237,7 @@ export class Organization extends React.Component {
                         <div className="modal__footer">
                             <div className="row align-items-center">
                                 <div className="col-md-8">
-                                    <p className="mb-0">1 seats will be added to your organization</p>
+                                    <p className="mb-0 text--gray">1 seats will be added to your organization</p>
                                 </div>
 
                                 <div className="col-md-4">

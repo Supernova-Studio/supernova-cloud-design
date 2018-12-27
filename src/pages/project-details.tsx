@@ -46,6 +46,17 @@ export class ProjectDetails extends React.Component {
                             <li><a className="link--active" href="#">App screens</a></li>
 
                             <li><a href="#">Manage team</a></li>
+
+                            <li className="hide-md-up">
+                                <Dropdown
+                                    align="right"
+                                    handleDropdownClick={this.handleSharePopupOpen}
+                                    hasDividers={true}
+                                    isDropdownOpen={this.state.isSharePopoverOpen}
+                                    items={['Twitter', 'Instagram', 'Facebook']}
+                                    label={[<a className="filter__share-link" key="project_detail_0"><img src={require('images/icons/icon-share.svg')} alt="Share" />Share</a>]}
+                                />
+                            </li>
                         </ul>
 
                         <div className="filter__nav--slider">
@@ -63,7 +74,7 @@ export class ProjectDetails extends React.Component {
                         </div>
 
                         <ul className="filter__nav filter__nav--right">
-                            <li>
+                            <li className="hide-md-down">
                                 <Dropdown
                                     align="right"
                                     handleDropdownClick={this.handleSharePopupOpen}

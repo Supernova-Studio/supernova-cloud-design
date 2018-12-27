@@ -7,6 +7,24 @@
     & .filter__nav--right .dropdown__container {
         top: 3px;
     }
+
+    @media (max-width: 767px) {
+        & .filter__nav--left {
+            justify-content: space-between;
+            order: 1;
+            width: 100%;
+        }
+
+        & .filter__nav--slider {
+            order: 3;
+        }
+
+        & .filter__nav--right {
+            order: 2;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+    }
 }
 
 .project-details__row {

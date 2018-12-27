@@ -63,7 +63,7 @@ export class Plan extends React.Component {
 
     render() {
         return(
-            <div className="page--home">
+            <div className="page--plan">
                 <div className="page__title">
                     <div className="container">
                         <h1 className="h2">Personal Plans</h1>
@@ -74,11 +74,11 @@ export class Plan extends React.Component {
                     <div className="container">
                         <div className="settings__content">
                             <div className="row align-items-end">
-                                <div className="col-md-9">
+                                <div className="col-md-7 col-lg-8 col-xl-9">
                                     {this.generatePageTitle()}
                                 </div>
 
-                                <div className="col-md-3">
+                                <div className="col-md-5 col-lg-4 col-xl-3">
                                     <div className={`switch__wrapper switch__wrapper${this.state.isYearly ? '--disabled' : '--enabled'}`}>
                                         <span className="switch__note">Save 20%</span>
 
@@ -91,15 +91,14 @@ export class Plan extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="row mt-2">
-                                <div className="col-md-9">
+                            <div className="plans__row row mt-2">
+                                <div className="col-md-7 col-lg-8 col-xl-9">
                                     {window.location.href.indexOf('/plan#payment') !== -1 && <PlanPayment />}
 
                                     {window.location.href.indexOf('/plan') !== -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1 && <PlanSelection />}
                                 </div>
 
-                                <div className="col-md-3">
-
+                                <div className="col-md-5 col-lg-4 col-xl-3">
                                     <PricingPlanVertical isYearly={this.state.isYearly} type="Code" />
                                 </div>
                             </div>

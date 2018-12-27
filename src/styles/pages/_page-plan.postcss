@@ -1,0 +1,46 @@
+/* Page - Plan */
+.page--plan {
+    @media (max-width: 991px) {
+        & .switch__wrapper {
+            justify-content: center;
+            margin-top: 32px;
+        }
+
+        & .plan--horizontal {
+            text-align: center;
+
+            &:not(.plan--popular) {
+                & .plan__body {
+                    padding-top: 8px;
+                }
+            }
+
+            & .plan__body {
+                padding-bottom: 0;
+            }
+
+            & .btn {
+                margin-top: 48px;
+            }
+        }
+
+        & .plan--vertical {
+            & .plan__body {
+                display: flex;
+                justify-content: center;
+            }
+
+            & .plan__features {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.plans__row {
+    @media (max-width: 767px) {
+        & [class*=col-]:last-child {
+            margin-top: 48px;
+        }
+    }
+}

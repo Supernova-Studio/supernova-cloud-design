@@ -68,26 +68,51 @@
 
 /* Plan - horizontal */
 .plan--horizontal {
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+
+    @media (min-width: 992px) {
+        flex-flow: row nowrap;
+    }
+}
+
+.plan--horizontal .plan__head,
+.plan--horizontal .plan__body,
+.plan--horizontal .plan__footer {
+    width: 100%;
 }
 
 .plan--horizontal .plan__head {
-    width: 136px;
     /* height: 156px; */
+
+    @media (min-width: 992px) {
+        width: 136px;
+    }
+
+    @media (max-width: 991px) {
+        height: 156px;
+    }
 }
 
 .plan--horizontal .plan__body {
-    width: calc(100% - (136px + 212px));
+    @media (min-width: 992px) {
+        width: calc(100% - (136px + 212px));
+    }
 }
 
 .plan--horizontal .plan__footer {
-    width: 212px;
+    @media (min-width: 992px) {
+        width: 212px;
+    }
 }
 
 .plan--horizontal .plan__price,
 .plan--horizontal .plan__period {
     display: block;
-    text-align: right;
+    text-align: center;
+
+    @media (min-width: 992px) {
+        text-align: right;
+    }
 }
 
 /* Plan - popular */

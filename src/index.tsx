@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { Activity } from './pages/activity'
 import { Account } from './pages/account'
 import { Home } from './pages/home'
+import { ForgotPassword } from './pages/forgot-password'
 import { Plan } from './pages/plan'
 import { PlanSuccess } from './pages/plans/plan-success'
 import { NoAccess } from './pages/no-access'
@@ -29,10 +30,11 @@ class App extends React.Component {
                     <Route path="/" component={Home} exact={true} />
                     <Route path="/projects" component={Projects} />
                     <Route path="/project-details" component={ProjectDetails} />
-                    <Route path="/activity" component={Activity} />
-                    <Route path="/organization" component={Organization} />
                     <Route path="/account" component={Account} />
+                    <Route path="/activity" component={Activity} />
+                    <Route path="/forgot-password" component={ForgotPassword} />
                     <Route path="/no-access" component={NoAccess} />
+                    <Route path="/organization" component={Organization} />
                     <Route path="/plan" component={Plan} />
                     <Route path="/plan-success" component={PlanSuccess} />
                     <Route path="/settings" component={Settings} />

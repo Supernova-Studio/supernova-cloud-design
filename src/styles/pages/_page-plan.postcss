@@ -6,24 +6,6 @@
             margin-top: 32px;
         }
 
-        & .plan--horizontal {
-            text-align: center;
-
-            &:not(.plan--popular) {
-                & .plan__body {
-                    padding-top: 8px;
-                }
-            }
-
-            & .plan__body {
-                padding-bottom: 0;
-            }
-
-            & .btn {
-                margin-top: 48px;
-            }
-        }
-
         & .plan--vertical {
             & .plan__body {
                 display: flex;
@@ -52,9 +34,46 @@
             }
         }
     }
+
+    @media (max-width: 1199px) and (min-width: 991px) {
+        & .plan--horizontal {
+            max-width: calc(50% - 8px);
+            text-align: center;
+
+            &:not(.plan--popular) {
+                & .plan__body {
+                    padding-top: 8px;
+                }
+            }
+
+            & .plan__body {
+                padding-bottom: 0;
+            }
+
+            & .btn {
+                margin-top: 48px;
+            }
+        }
+
+        & .plan--horizontal + .plan--horizontal {
+            margin-top: 0;
+        }
+
+        & .plan--horizontal:nth-of-type(n + 3) {
+            margin-top: 8px;
+        }
+    }
 }
 
 .plans__row {
+    @media (max-width: 1199px) and (min-width: 991px) {
+        & [class*=col-]:first-child {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+    }
+
     @media (max-width: 767px) {
         & [class*=col-]:last-child {
             margin-top: 48px;

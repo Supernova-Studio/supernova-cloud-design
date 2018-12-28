@@ -23,7 +23,9 @@ button[disabled] {
         text-transform: initial;
     }
 
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 16px;
     font-family: inherit;
     font-size: 14px;
@@ -51,6 +53,52 @@ button[disabled] {
         margin-right: 24px;
     }
 }
+
+@keyframes anim-spin {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+  }
+
+  50% {
+    transform: rotate(180deg);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-spinner {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    animation: anim-spin 1s infinite;
+    transition: all .3s ease-in;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        margin: auto;
+        content: ' ';
+        background: center center no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        border-width: 3px;
+        border-style: solid;
+        border-color: currentColor currentColor currentColor transparent;
+    }
+}
+
 
 .btn--primary {
     &,

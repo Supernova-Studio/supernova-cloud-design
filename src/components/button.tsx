@@ -4,6 +4,7 @@ import * as React from 'react'
 type ButtonProps = {
     clickHandler?: any;
     disabled?: boolean;
+    hasSpinner?: boolean;
     label: string;
     type: 'primary' | 'ghost';
 }
@@ -16,7 +17,7 @@ export class Button extends React.PureComponent<ButtonProps, {}> {
             disabled={this.props.disabled ? true : false}
             onClick={this.props.clickHandler ? this.props.clickHandler : undefined}
         >
-            {this.props.label}
+            {this.props.label} {this.props.hasSpinner ? <span className="btn-spinner" /> : null}
         </button>)
     }
 }

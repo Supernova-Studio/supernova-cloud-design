@@ -16,7 +16,7 @@ export class SettingsAccount extends React.PureComponent<SettingsAccountProps, {
             <div className="settings__content">
                 <h2 className="h3">{this.props.isPersonal ? 'Public profile' : 'Organization profile'}</h2>
 
-                <div className="row">
+                <div className="settings__profile row">
                     <div className="col-md-7">
                         <div className="settings__form">
                             {this.props.isPersonal ? <FormPersonal /> : <FormOrg />}

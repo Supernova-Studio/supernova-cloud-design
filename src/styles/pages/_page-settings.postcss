@@ -16,9 +16,25 @@
             left: 0;
             z-index: -1;
             content: '';
-            width: 50%;
+            width: calc(var(--width--sidebar-mobile) + 15px);
             height: 100%;
             background-color: #f4f4f5;
+
+            @media (min-width: 576px) {
+                width: calc(50% - 207px);
+            }
+
+            @media (min-width: 768px) {
+                width: calc(50% - 138px);
+            }
+
+            @media (min-width: 992px) {
+                width: calc(50% - 240px);
+            }
+
+            @media (min-width: 1200px) {
+                width: calc(50% - 320px);
+            }
         }
     }
 
@@ -37,13 +53,25 @@
 
 .settings__content {
     align-items: flex-start;
+    flex-grow: 1;
     flex-wrap: wrap;
-    padding: 32px;
+    padding: 32px 0 32px 32px;
+    height: 100%;
     background-color: #fff;
+}
+
+.settings__profile {
+    @media (max-width: 767px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .settings__avatar {
     text-align: center;
+
+    @media (max-width: 767px) {
+        margin-bottom: 48px;
+    }
 
     & .text--small {
         font-weight: 500;

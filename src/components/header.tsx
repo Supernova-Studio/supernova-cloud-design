@@ -23,6 +23,8 @@ export class Header extends React.Component {
             <header className="header">
               <div className="container">
                 <div className="nav__wrapper">
+                    <Link to="/"><img className="header__logo" src={require('../images/supernova-logo-white.svg')} alt="Supernova" /></Link>
+
                     <nav className="nav">
                         <ul className="nav--left">
                             <li>

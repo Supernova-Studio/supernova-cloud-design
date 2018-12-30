@@ -2,11 +2,14 @@
 .sidebar {
     padding-top: 48px;
     padding-bottom: 48px;
-    padding-left: 52px;
-    width: 100%;
-    max-width: var(--width--sidebar);
+    min-width: var(--width--sidebar-mobile);
+    width: var(--width--sidebar-mobile);
     font-family: var(--ff-lato);
     background-color: #f4f4f5;
+
+    @media (min-width: 768px) {
+        width: var(--width--sidebar-desktop);
+    }
 }
 
 .sidebar__heading,
@@ -19,6 +22,10 @@
     font-weight: 900;
     text-transform: uppercase;
     opacity: .5;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
 }
 
 .sidebar__heading + .sidebar__list,
@@ -39,21 +46,34 @@
 .sidebar__link {
     display: flex;
     align-items: center;
-    padding-right: 52px;
     font-size: 16px;
     font-weight: 900;
     transition: var(--tran-full);
 
+    @media (min-width: 768px) {
+        padding-right: 48px;
+    }
+
+    @media (max-width: 767px) {
+    }
+
     & .icon,
     & .avatar {
-        margin-right: 18px;
+        @media (min-width: 768px) {
+            margin-right: 18px;
+        }
     }
 
     & .icon {
-        width: 100%;
-        max-width: 20px;
+        width: 28px;
+        height: 28px;
         filter: var(--filter-icon-blue-to-black);
         transition: filter var(--tran-part);
+
+        @media (min-width: 768px) {
+            width: 20px;
+            height: 20px;
+        }
     }
 
     &:hover .icon {
@@ -65,6 +85,12 @@
         width: 24px;
         height: 24px;
         object-fit: contain;
+    }
+
+    & .icon-label {
+        @media (max-width: 767px) {
+            display: none;
+        }
     }
 }
 

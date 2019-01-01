@@ -66,7 +66,9 @@ export class Projects extends React.Component {
                         </ul>
 
                         <ul className="filter__nav filter__nav--right">
-                            <li>
+                            <li className="filter__input-wrapper">
+                                <span className="filter__icon"></span>
+
                                 <input
                                     className="filter__input"
                                     type="text"

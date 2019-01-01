@@ -13,8 +13,23 @@
     background-color: #fff;
 }
 
+.filter__input-wrapper {
+    position: relative;
+}
+
+.filter__icon {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    width: 12px;
+    height: 12px;
+    background: url('../images/icons/icon-search.svg');
+    opacity: .2;
+    transform: translateY(-50%);
+}
+
 .filter__input {
-    padding: 7px 7px 7px 12px;
+    padding: 7px 7px 7px 26px;
     font-family: var(--ff-work-sans);
     font-size: 14px;
     color: #26272b;
@@ -148,7 +163,7 @@
 
 @media (min-width: 768px) {
     .filter__nav--middle {
-        margin-right: 8px;
+        margin-right: 36px;
         margin-left: auto;
     }
 

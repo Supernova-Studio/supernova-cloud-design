@@ -86,7 +86,7 @@ export class ProjectDetails extends React.Component {
                             </li>
 
                             <li className="filter__input-wrapper">
-                                <span className="filter__icon"></span>
+                                <span className="filter__icon" />
 
                                 <input
                                     className="filter__input"

@@ -56,6 +56,16 @@ export class Dropdown extends React.Component<DropdownProps, {}> {
         })
     }
 
+    handleDropdownOverlayClick = (event)  => {
+        event.preventDefault()
+
+        console.log('click')
+
+        this.setState({
+            isDropdownOpen: !this.state.isDropdownOpen
+        })
+    }
+
     // Render the app
     render() {
         return <div className="dropdown__container">
@@ -68,6 +78,8 @@ export class Dropdown extends React.Component<DropdownProps, {}> {
                     </li>)
                 })}
             </ul>
+
+            {this.state.isDropdownOpen && <div className="dropdown__overlay" onClick={this.props.handleDropdownClick ? () => this.props.handleDropdownClick(event) : () => this.handleDropdownClick(event)} />}
         </div>
     }
 }

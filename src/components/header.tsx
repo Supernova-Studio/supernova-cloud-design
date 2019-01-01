@@ -87,6 +87,8 @@ export class Header extends React.Component {
                                         <a className="dropdown__link no-underline" href="#">Sign out</a>
                                     </li>
                                 </ul>
+
+                                {this.state.isProfileMenuOpened && <div className="dropdown__overlay" onClick={this.handleProfileMenuToggle} />}
                             </li>
 
                             <li>

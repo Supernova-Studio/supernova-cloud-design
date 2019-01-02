@@ -51,11 +51,17 @@ textarea,
     font-family: var(--ff-lato);
 }
 
+fieldset,
+input,
+select,
+textarea {
+    width: 100%;
+}
+
 input,
 select,
 textarea {
     padding: 10px;
-    width: 100%;
     font-size: 16px;
     background-color: #fff;
     border: 1px solid #d3d3d5;
@@ -125,4 +131,18 @@ textarea {
     font-size: 12px;
     font-weight: 500;
     color: #c10000;
+}
+
+/* Form - Gray */
+.form--gray {
+    padding: 24px;
+    background-color: #f4f4f5;
+    border: 1px solid rgba(35, 36, 43, .2);
+    border-radius: var(--radius-small);
+
+    & input,
+    & select,
+    & textarea {
+        background-color: rgba(255, 255, 255, .5);
+    }
 }

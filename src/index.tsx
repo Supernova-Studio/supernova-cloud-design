@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 import { Activity } from './pages/activity'
 import { Account } from './pages/account'
+import { CreateOrg } from './pages/create-org'
 import { Home } from './pages/home'
 import { ForgotPassword } from './pages/forgot-password'
 import { Plan } from './pages/plan'
@@ -28,6 +29,7 @@ class App extends React.Component {
                     <Header />
 
                     <Route path="/" component={Home} exact={true} />
+                    <Route path="/create-org" component={CreateOrg} />
                     <Route path="/projects" component={Projects} />
                     <Route path="/project-details" component={ProjectDetails} />
                     <Route path="/account" component={Account} />

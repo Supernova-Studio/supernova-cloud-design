@@ -96,7 +96,7 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
                         </div>
 
                         <div className="table__row">
-                            <div className="table__cell">2 Starting Users (minimum)</div>
+                            <div className="table__cell text--normal">2 Starting Users (minimum)</div>
 
                             <div className="table__cell">
                                 <span><strong>{String.fromCharCode(36)}70</strong> / <span className="text--normal">month</span></span>
@@ -104,7 +104,7 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
                         </div>
 
                         <div className="table__row">
-                            <div className="table__cell">8 Additional Users</div>
+                            <div className="table__cell text--normal">8 Additional Users</div>
 
                             <div className="table__cell">
                                 <span><strong>{String.fromCharCode(36)}280</strong> / <span className="text--normal">month</span></span>
@@ -132,7 +132,7 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
                         </div>
 
                         <div className="col-lg-6 d-flex justify-content-center justify-content-lg-end mb-md-down-2 mt-lg-down-1 mb-lg-down-1">
-                            <Button label="Create organization & Start Inviting" type="primary" disabled={true} />
+                            <Button label="Create organization & Start Inviting" type="primary" disabled={false} />
                         </div>
                     </div>
                 </fieldset>

@@ -100,11 +100,11 @@ export class CreateOrg extends React.Component {
                             <h2 className="h3 mb-2">Billing information</h2>
 
                             <div className="row">
-                                <div className="col-md-7 col-lg-9">
+                                <div className="col-lg-9">
                                     <FormCreateOrg />
                                 </div>
 
-                                <div className="col-md-5 col-lg-3 mt-md-down-2">
+                                <div className="col-lg-3 mt-lg-down-2">
                                     <div className="create-org__box card--create-org-box">
                                         <p className="text--14">Organization billing information is separate and is not shared with your personal Supernova account.</p>
                                     </div>

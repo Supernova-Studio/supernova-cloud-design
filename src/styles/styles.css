@@ -12,6 +12,7 @@
 @import 'components/_dropdown.postcss';
 @import 'components/_empty-message.postcss';
 @import 'components/_forms.postcss';
+@import 'components/_footer.postcss';
 @import 'components/_header.postcss';
 @import 'components/_icons.postcss';
 @import 'components/_lists.postcss';

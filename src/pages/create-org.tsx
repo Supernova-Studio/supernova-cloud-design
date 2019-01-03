@@ -52,16 +52,16 @@ export class CreateOrg extends React.Component {
                             <h2 className="h3 mb-2">Select Team Size</h2>
 
                             <div className="row">
-                                <div className="col-md-7 col-lg-9">
+                                <div className="col-lg-9">
                                     <div className="row mb-md-down-2">
-                                        <div className="col-md-6 col-lg-8">
+                                        <div className="col-md-7 col-lg-8">
                                             <p className="text--14"><strong>Team plans are tailored for teams of 2 - 10 people</strong></p>
 
                                             <p className="text--14">Unlimited Cloud and Studio for the whole team. All prototyping and hand-off features. Extra team options - consolidated billing, improved security with SSO, 2FA and premium support.</p>
                                         </div>
 
-                                        <div className="col-md-6 col-lg-4">
-                                            <p className="text--14 mb-0"><strong><span className="text--20">{String.fromCharCode(36)}35</span><span>/month</span></strong> <a className="link--blue" href="#!">(switch to yearly)*</a></p>
+                                        <div className="col-md-5 col-lg-4">
+                                            <p className="text--14 mb-0"><strong><span className="text--20">{String.fromCharCode(36)}35</span><span>/month</span> <a className="link--blue" href="#!">(switch to yearly)*</a></strong></p>
 
                                             <p className="text--14 mb-0">per member - clients are free</p>
 
@@ -84,7 +84,7 @@ export class CreateOrg extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="col-md-5 col-lg-3 mt-md-down-2">
+                                <div className="col-lg-3 mt-md-down-2 mt-lg-down-1">
                                     <div className="create-org__box card--create-org-box">
                                         <p className="text--14">Looking to add more than 10 members to your organization? Our enterprise plan is suited for larger companies.</p>
 

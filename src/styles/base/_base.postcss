@@ -33,6 +33,12 @@
     --width--sidebar-mobile: 48px;
 }
 
+#root {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+}
+
 .wrapper,
 .page-wrapper {
     display: flex;
@@ -45,6 +51,7 @@
 }
 
 .page-wrapper,
+.page--settings,
 .page__body {
     flex-grow: 1;
 }

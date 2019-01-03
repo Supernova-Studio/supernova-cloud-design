@@ -50,13 +50,13 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
                                     <input id="inputExpirationDateMonth" name="inputExpirationDateMonth" type="text" onChange={this.handleInputChange} defaultValue={this.state.inputExpirationDateMonth} />
                                 </div>
 
-                                <div className="col-md-6">
+                                <div className="col-md-6 mt-md-down-1">
                                     <input id="inputExpirationDateYear" name="inputExpirationDateYear" type="text" onChange={this.handleInputChange} defaultValue={this.state.inputExpirationDateYear} />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-md-5">
+                        <div className="col-md-5 mt-md-down-2">
                             <label htmlFor="inputCardCCV">CVC / CVV</label>
 
                             <input id="inputCardCCV" name="inputCardCCV" type="number" onChange={this.handleInputChange} defaultValue={this.state.inputCardCCV} />
@@ -76,7 +76,7 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
                         </fieldset>
                     </div>
 
-                    <div className="col-md-4">
+                    <div className="col-md-4 mt-md-down-2">
                         <fieldset>
                             <label htmlFor="inputZip">ZIP</label>
 
@@ -85,15 +85,33 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
                     </div>
                 </div>
 
+                <hr className="divider mt-2 mb-2" />
+
                 <fieldset>
                     <div className="table table--default">
                         <div className="table__row">
-                            <div className="table__cell">Upgrading to</div>
-
                             <div className="table__cell">
-                                <strong>Supernova Ultimate</strong>
+                                <a href="#" className="link--blue text--bold">Pay Yearly and save $840 / year</a>
                             </div>
                         </div>
+
+                        <div className="table__row">
+                            <div className="table__cell">2 Starting Users (minimum)</div>
+
+                            <div className="table__cell">
+                                <span><strong>{String.fromCharCode(36)}70</strong> / <span className="text--normal">month</span></span>
+                            </div>
+                        </div>
+
+                        <div className="table__row">
+                            <div className="table__cell">8 Additional Users</div>
+
+                            <div className="table__cell">
+                                <span><strong>{String.fromCharCode(36)}280</strong> / <span className="text--normal">month</span></span>
+                            </div>
+                        </div>
+
+                        <hr className="divider mt-2 mb-2" />
 
                         <div className="table__row">
                             <div className="table__cell">Billed now</div>
@@ -105,15 +123,15 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
                     </div>
                 </fieldset>
 
-                <fieldset>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <p className="mb-0 d-flex text--small text--blue-light"><span className="icon icon--lock" style={{marginRight: '8px', width: '11px', height: '16px'}} /> Secure credit card payment</p>
+                <fieldset className="mt-lg-down-1">
+                    <div className="row d-flex flex-column-reverse flex-lg-row">
+                        <div className="col-lg-6 text-lg-down-center">
+                            <p className="mb-0 d-flex justify-content-center justify-content-lg-start mb-lg-down-1 text--small text--blue-light"><span className="icon icon--lock" style={{marginRight: '8px', width: '11px', height: '16px'}} /> Secure credit card payment</p>
 
                             <p className="mb-0 text--small text--gray">Secured using 128-bit SSL encrypted channel</p>
                         </div>
 
-                        <div className="col-lg-6 d-flex justify-content-end">
+                        <div className="col-lg-6 d-flex justify-content-center justify-content-lg-end mb-md-down-2 mt-lg-down-1 mb-lg-down-1">
                             <Button label="Create organization & Start Inviting" type="primary" disabled={true} />
                         </div>
                     </div>

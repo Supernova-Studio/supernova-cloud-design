@@ -89,7 +89,7 @@ export class Organization extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <div className="page--organization">
+                <div className="page page--organization">
                     <div className="page__title">
                         <div className="container">
                             {this.state.isMemberOfOrg && <div className="organization-page__logo">
@@ -102,7 +102,7 @@ export class Organization extends React.Component {
                         </div>
                     </div>
 
-                    <div className="settings__content">
+                    <div className="page__content">
                         <div className="container">
                             {this.state.isMemberOfOrg ? (
                                     <React.Fragment>

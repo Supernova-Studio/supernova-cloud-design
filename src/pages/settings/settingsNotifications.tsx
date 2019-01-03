@@ -10,7 +10,7 @@ export class SettingsNotifications extends React.PureComponent<SettingsNotificat
     // Render the app
     render() {
         return (
-            <div className="settings__content settings__content--vertical">
+            <div className="page__content page__content--vertical">
                 <h2 className="h3">Notifications</h2>
 
                 <div className="table">

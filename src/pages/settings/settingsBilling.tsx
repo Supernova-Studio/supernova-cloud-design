@@ -17,7 +17,7 @@ export class SettingsBilling extends React.PureComponent<SettingsBillingProps, {
     // Render the app
     render() {
         return (
-            <div className="settings__content settings__content--vertical">
+            <div className="page__content page__content--vertical">
                 <h2 className="h3">Billing</h2>
 
                 <div className="row">

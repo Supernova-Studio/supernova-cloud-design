@@ -65,7 +65,7 @@ export class Plan extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <div className="page--plan">
+                <div className="page page--plan">
                     <div className="page__title">
                         <div className="container">
                             <h1 className="h2">Personal Plans</h1>
@@ -74,7 +74,7 @@ export class Plan extends React.Component {
 
                     <div className="page__body">
                         <div className="container">
-                            <div className="settings__content">
+                            <div className="page__content">
                                 <div className="row align-items-end">
                                     <div className="col-md-7 col-lg-8 col-xl-9">
                                         {this.generatePageTitle()}

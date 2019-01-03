@@ -13,7 +13,7 @@ export class SettingsAccount extends React.PureComponent<SettingsAccountProps, {
     // Render the app
     render() {
         return (
-            <div className="settings__content">
+            <div className="page__content">
                 <h2 className="h3">{this.props.isPersonal ? 'Public profile' : 'Organization profile'}</h2>
 
                 <div className="settings__profile row">

@@ -9,7 +9,7 @@ export class SettingsOrganizations extends React.PureComponent<SettingsOrganizat
     // Render the app
     render() {
         return (
-            <div className="settings__content">
+            <div className="page__content">
                 <h2 className="h3">Organizations</h2>
 
                 <p className="form__note mb-2">Organizations allow people to work together much more effectively by suggesting who to mention, providing quick ways to invite every team member at once, and allowing for complete management of access rights and licenses.</p>

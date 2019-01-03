@@ -9,7 +9,7 @@ export class CreateOrg extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <div className="page--create-org">
+                <div className="page page--create-org">
                     <div className="page__title">
                         <div className="container">
                             <h1 className="h2">Create Organization</h1>

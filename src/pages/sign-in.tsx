@@ -96,7 +96,7 @@ export class SignIn extends React.Component {
 
     render() {
         return(
-            <div className="page--sign-in">
+            <div className="page page--sign-in">
                 <div className="page__body">
                     <Modal
                         bodyOpenClassName="modal-sign-in-open"

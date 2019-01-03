@@ -7,7 +7,7 @@ export class PlanSuccess extends React.PureComponent<PlanSuccessProps, {}> {
     // Render the app
     render() {
         return (
-            <div className="page--plan-success">
+            <div className="page page--plan-success">
                 <div className="page__title">
                     <div className="container">
                         <h1 className="h2">Personal Plans</h1>
@@ -16,7 +16,7 @@ export class PlanSuccess extends React.PureComponent<PlanSuccessProps, {}> {
 
                 <div className="page__body">
                     <div className="container">
-                        <div className="settings__content">
+                        <div className="page__content">
                             <h2 className="h3">All set! Time to build pixel-perfect apps with Supernova!</h2>
 
                             <p className="form__note mt-1">Your account has been successfully upgraded to <strong>Ultimate</strong>.</p>

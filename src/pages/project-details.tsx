@@ -35,7 +35,7 @@ export class ProjectDetails extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <div className="page--project-details">
+                <div className="page page--project-details">
                     <div className="page__title">
                         <div className="container">
                             <h1 className="h2">Spacebook</h1>

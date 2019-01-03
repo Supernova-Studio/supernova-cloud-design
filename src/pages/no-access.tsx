@@ -10,7 +10,7 @@ export class NoAccess extends React.Component {
 
     render() {
         return(
-            <div className="page--settings">
+            <div className="page page--settings">
                 <div className="page__title">
                     <div className="container">
                         <h1 className="h2">Settings</h1>
@@ -21,7 +21,7 @@ export class NoAccess extends React.Component {
                     <div className="container">
                         <Sidebar pageActive={this.state.activePage} linkClickHandler={(event) => {event.preventDefault()}} isOrganization={true} />
 
-                        <div className="settings__content">
+                        <div className="page__content">
                             <h2 className="h3">Organization Profile</h2>
 
                             <p className="form__note">Organizations allow people to work together much more effectively by suggesting who to mention, providing quick ways to invite every team member at once, and allowing for complete management of access rights and licenses.</p>

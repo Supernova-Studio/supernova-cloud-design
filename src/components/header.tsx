@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom'
 // Dashboard header implementation
 export class Header extends React.Component {
     state = {
+        hasAvatar: true,
         isFree: false,
-        isProfileMenuOpened: false
+        isProfileMenuOpened: false,
+        userInitials: 'AD'
     }
 
     handleProfileMenuToggle = (event) => {
@@ -17,20 +19,17 @@ export class Header extends React.Component {
         })
     }
 
-    // Render the menu of the dashboard
     render() {
         return (
             <header className="header">
               <div className="container">
                 <div className="nav__wrapper">
-                    <Link to="/"><img className="header__logo" src={require('../images/supernova-logo-white.svg')} alt="Supernova" /></Link>
+                    <Link to="/" className="hide-md-down"><img className="header__logo" src={require('../images/supernova-logo-white.svg')} alt="Supernova" /></Link>
 
                     <nav className="nav">
-                        <ul className="nav--left">
-                            <li>
-                                <span className="nav-closer">{String.fromCharCode(215)}</span>
-                            </li>
+                        <Link to="/" className="hide-md-up"><img className="header__logo" src={require('../images/supernova-logo-white.svg')} alt="Supernova" /></Link>
 
+                        <ul className="nav--left">
                             <li>
                                 <Link className={window.location.href.indexOf('/projects') !== -1 ? 'nav-link link--active' : 'nav-link'} to="/projects">Projects</Link>
                             </li>
@@ -45,16 +44,25 @@ export class Header extends React.Component {
                         </ul>
 
                         <ul className="nav--right">
-                            <li>
+                            <li className="hide-md-down">
                                 <a className="link--blue nav-link" href="#">Download Studio</a>
                             </li>
 
-                            {this.state.isFree && <li>
+                            {this.state.isFree && <li className="hide-md-down">
                                 <a className="link--blue nav-link" href="#">Upgrade to Pro</a>
                             </li>}
 
-                            <li className="dropdown__container hide-md-down">
-                                <a className="nav-link link--user dropdown__toggler" href="profile.html" onClick={this.handleProfileMenuToggle}>AD <span>{String.fromCharCode(9662)}</span></a>
+                            <li className="dropdown__container">
+                                <a className="nav-link link--user dropdown__toggler" href="profile.html" onClick={this.handleProfileMenuToggle}>
+                                    {
+                                        this.state.hasAvatar ? (
+                                            <img className="nav__avatar-photo" src={require('src/images/avatar-jiri.png')} alt={this.state.userInitials} />
+                                        ) : (
+                                            this.state.userInitials
+                                        )
+                                    }
+                                    <span>{String.fromCharCode(9662)}</span>
+                                </a>
 
                                 <ul className={'dropdown__list dropdown__list--right' + (this.state.isProfileMenuOpened ? ' dropdown__list--visible' : '')}>
                                     <li className="dropdown__item dropdown__item-content nav__user-info">
@@ -96,13 +104,6 @@ export class Header extends React.Component {
                             </li>
                         </ul>
                     </nav>
-
-                    <button className="nav-opener" type="button" aria-label="Toggle navigation">
-                        <span />
-                        <span />
-                        <span />
-                        <span />
-                    </button>
                 </div>
               </div>
             </header>

@@ -97,7 +97,7 @@ export class Plan extends React.Component {
                                     <div className="col-md-7 col-lg-8 col-xl-9">
                                         {window.location.href.indexOf('/plan#payment') !== -1 && <PlanPayment />}
 
-                                        {window.location.href.indexOf('/plan') !== -1 && window.location.href.indexOf('/plan#payment') === -1 && window.location.href.indexOf('/plan#success') === -1 && <PlanSelection />}
+                                        {window.location.href.indexOf('/plan') !== -1 && window.location.href.indexOf('/plan#payment') === -1 && <PlanSelection />}
                                     </div>
 
                                     <div className="col-md-5 col-lg-4 col-xl-3">

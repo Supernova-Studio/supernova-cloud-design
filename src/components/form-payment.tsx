@@ -27,7 +27,7 @@ export class FormPayment extends React.Component<FormPaymentProps, {}> {
     // Render the app
     render() {
         return (
-            <form className="form form--gray form--personal">
+            <form className="form form--gray">
                 <fieldset>
                     <label htmlFor="inputName">Name on card</label>
 
@@ -50,13 +50,13 @@ export class FormPayment extends React.Component<FormPaymentProps, {}> {
                                     <input id="inputExpirationDateMonth" name="inputExpirationDateMonth" type="text" onChange={this.handleInputChange} defaultValue={this.state.inputExpirationDateMonth} />
                                 </div>
 
-                                <div className="col-md-6">
+                                <div className="col-md-6 col-md-6 mt-md-down-2 mb-md-down-1">
                                     <input id="inputExpirationDateYear" name="inputExpirationDateYear" type="text" onChange={this.handleInputChange} defaultValue={this.state.inputExpirationDateYear} />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-md-5">
+                        <div className="col-md-5 mt-md-down-1">
                             <label htmlFor="inputCardCCV">CVC / CVV</label>
 
                             <input id="inputCardCCV" name="inputCardCCV" type="number" onChange={this.handleInputChange} defaultValue={this.state.inputCardCCV} />
@@ -76,7 +76,7 @@ export class FormPayment extends React.Component<FormPaymentProps, {}> {
                         </fieldset>
                     </div>
 
-                    <div className="col-md-4">
+                    <div className="col-md-4 mt-md-down-2">
                         <fieldset>
                             <label htmlFor="inputZip">ZIP</label>
 
@@ -106,14 +106,14 @@ export class FormPayment extends React.Component<FormPaymentProps, {}> {
                 </fieldset>
 
                 <fieldset>
-                    <div className="row">
-                        <div className="col-lg-7 col-xl-9">
-                            <p className="mb-0 d-flex text--small text--blue-light"><span className="icon icon--lock" style={{marginRight: '8px', width: '11px', height: '16px'}} /> Secure credit card payment</p>
+                    <div className="row flex-column-reverse flex-lg-row">
+                        <div className="col-lg-7 col-xl-9 text-lg-down-center">
+                            <p className="mb-0 d-flex justify-content-center justify-content-lg-start mb-lg-down-1 text--small text--blue-light"><span className="icon icon--lock" style={{marginRight: '8px', width: '11px', height: '16px'}} /> Secure credit card payment</p>
 
                             <p className="mb-0 text--small text--gray">Secured using 128-bit SSL encrypted channel</p>
                         </div>
 
-                        <div className="col-lg-5 col-xl-3">
+                        <div className="col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-end mt-md-down-1 mb-lg-down-2">
                             <Button label="Upgrade to Ultimate" type="primary" disabled={true} />
                         </div>
                     </div>

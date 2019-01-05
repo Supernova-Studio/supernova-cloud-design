@@ -47,7 +47,17 @@ export class CardProject extends React.Component<CardProjectProps, {}> {
                             handleDropdownClick={() => this.handleDropdownClick()}
                             hasDividers={true}
                             isDropdownOpen={this.state.isDropdownOpen}
-                            items={['Archive', 'Delete', 'Manage Team']}
+                            items={[
+                                <React.Fragment key="drpProj_0">
+                                    <span className="icon icon--trash-can" style={{ marginRight: '10px', width: '15px', height: '16px' }} /> Delete
+                                </React.Fragment>,
+                                <React.Fragment key="drpProj_1">
+                                    <span className="icon icon--archive" style={{ marginRight: '10px', width: '16px', height: '13px' }} /> Archive
+                                </React.Fragment>,
+                                <React.Fragment key="drpProj_2">
+                                    <span className="icon icon--settings" style={{ marginRight: '10px', width: '17px', height: '17px' }} /> Manage Team
+                                </React.Fragment>
+                            ]}
                             label={<span className="icon icon--menu"/>}
                         />
                     </div>

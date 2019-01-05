@@ -133,7 +133,7 @@ export class Organization extends React.Component {
                                         </div>
 
                                         <div className="table-wrapper">
-                                            <div className="table">
+                                            <div className="table table--scrollable">
                                                 {this.generateOrgTable()}
                                             </div>
                                         </div>

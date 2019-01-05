@@ -12,7 +12,7 @@ export class Header extends React.Component {
     }
 
     handleProfileMenuToggle = (event) => {
-        event.preventDefault()
+        // event.preventDefault()
 
         this.setState({
             isProfileMenuOpened: !this.state.isProfileMenuOpened
@@ -45,15 +45,15 @@ export class Header extends React.Component {
 
                         <ul className="nav--right">
                             <li className="hide-md-down">
-                                <a className="link--blue nav-link" href="#">Download Studio</a>
+                                <a className="link--blue nav-link" href="#!">Download Studio</a>
                             </li>
 
                             {this.state.isFree && <li className="hide-md-down">
-                                <a className="link--blue nav-link" href="#">Upgrade to Pro</a>
+                                <a className="link--blue nav-link" href="#!">Upgrade to Pro</a>
                             </li>}
 
                             <li className="dropdown__container">
-                                <a className="nav-link link--user dropdown__toggler" href="profile.html" onClick={this.handleProfileMenuToggle}>
+                                <a className="nav-link link--user dropdown__toggler" href="#!" onClick={this.handleProfileMenuToggle}>
                                     {
                                         this.state.hasAvatar ? (
                                             <img className="nav__avatar-photo" src={require('src/images/avatar-jiri.png')} alt={this.state.userInitials} />
@@ -74,25 +74,25 @@ export class Header extends React.Component {
                                     <li className="dropdown__item dropdown__divider" />
 
                                     <li className="dropdown__item">
-                                        <Link className="dropdown__link no-underline" to="/no-access">Your account</Link>
+                                        <Link onClick={this.handleProfileMenuToggle} className="dropdown__link no-underline" to="/no-access">Your account</Link>
                                     </li>
 
                                     <li className="dropdown__item">
-                                        <Link className="dropdown__link no-underline" to="/plan">Your plan</Link>
+                                        <Link onClick={this.handleProfileMenuToggle} className="dropdown__link no-underline" to="/plan">Your plan</Link>
                                     </li>
 
                                     <li className="dropdown__item">
-                                        <Link className="dropdown__link no-underline" to="/settings">Personal settings</Link>
+                                        <Link onClick={this.handleProfileMenuToggle} className="dropdown__link no-underline" to="/settings">Personal settings</Link>
                                     </li>
 
                                     <li className="dropdown__item dropdown__divider hide-md-down" />
 
                                     <li className="dropdown__item">
-                                        <a className="dropdown__link no-underline" href="#">Help</a>
+                                        <a className="dropdown__link no-underline" href="#!" onClick={this.handleProfileMenuToggle}>Help</a>
                                     </li>
 
                                     <li className="dropdown__item">
-                                        <a className="dropdown__link no-underline" href="#">Sign out</a>
+                                        <a className="dropdown__link no-underline" href="#!" onClick={this.handleProfileMenuToggle}>Sign out</a>
                                     </li>
                                 </ul>
 

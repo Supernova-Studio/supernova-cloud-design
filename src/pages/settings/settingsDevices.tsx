@@ -14,21 +14,21 @@ export class SettingsDevices extends React.PureComponent<SettingsDevicesProps, {
 
                 <div className="table table--gray">
                     <div className="table__row">
-                        <div className="table__cell">
+                        <div className="table__cell col-md-7 col-lg-8">
                             <p className="table__cell-title">Jiri's Mac, SN: 3*********DFED</p>
                         </div>
 
-                        <div className="table__cell">
+                        <div className="table__cell col-md-5 col-lg-4 align-items-start align-items-md-end mt-md-down-half">
                             <a className="link--blue" href="#">Unlink Jiri's Mac</a>
                         </div>
                     </div>
 
                     <div className="table__row">
-                        <div className="table__cell">
+                        <div className="table__cell col-md-7 col-lg-8">
                             <p className="table__cell-title">Jiri's Mac 2, SN: 3*********DFED</p>
                         </div>
 
-                        <div className="table__cell">
+                        <div className="table__cell col-md-5 col-lg-4 align-items-start align-items-md-end mt-md-down-half">
                             <a className="link--blue" href="#">Unlink Jiri’s Mac 2</a>
                         </div>
                     </div>

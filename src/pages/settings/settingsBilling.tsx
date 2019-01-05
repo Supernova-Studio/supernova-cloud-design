@@ -21,7 +21,7 @@ export class SettingsBilling extends React.PureComponent<SettingsBillingProps, {
                 <h2 className="h3">Billing</h2>
 
                 <div className="row">
-                    <div className="col-md-8">
+                    <div className="col-lg-8">
                         <div className="table">
                             <div className="table__row">
                                 <div className="table__cell">
@@ -60,7 +60,7 @@ export class SettingsBilling extends React.PureComponent<SettingsBillingProps, {
                                     }
                                 </div>
 
-                                <div className="table__cell table__cell--right col-md-4">
+                                <div className="table__cell table__cell--right col-md-4 align-items-start align-items-md-end justify-content-start mt-md-down-1 text-md-down-left">
                                     {
                                         this.props.isPersonal ? (
                                             <React.Fragment>
@@ -151,7 +151,7 @@ export class SettingsBilling extends React.PureComponent<SettingsBillingProps, {
                         </div>
                     </div>
 
-                    <div className="col-md-4">
+                    <div className="col-lg-4 mt-lg-down-2">
                         <h3 className="h6 mb-1">Credit Card</h3>
 
                         {
@@ -190,7 +190,7 @@ export class SettingsBilling extends React.PureComponent<SettingsBillingProps, {
                 <h2 className="h3 mt-4">Extra billing information</h2>
 
                 <div className="row">
-                    <div className="col-md-8">
+                    <div className="col-lg-8">
                         <FormBilling />
                     </div>
                 </div>

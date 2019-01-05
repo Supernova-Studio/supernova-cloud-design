@@ -32,6 +32,7 @@
 @import 'pages/_page-plan.postcss';
 @import 'pages/_page-plan-success.postcss';
 @import 'pages/_page-project-details.postcss';
+@import 'pages/_page-notifications.postcss';
 @import 'pages/_page-settings.postcss';
 @import 'pages/_page-sign-in.postcss';
 

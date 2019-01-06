@@ -132,6 +132,8 @@ export class Organization extends React.Component {
                                             </ul>
                                         </div>
 
+                                        <p className="text--14 text--gray text--right hide-md-up">* This table is horizontally scrollable.</p>
+
                                         <div className="table-wrapper">
                                             <div className="table table--scrollable">
                                                 {this.generateOrgTable()}

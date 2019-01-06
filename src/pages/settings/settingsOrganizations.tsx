@@ -14,6 +14,8 @@ export class SettingsOrganizations extends React.PureComponent<SettingsOrganizat
 
                 <p className="form__note mb-2">Organizations allow people to work together much more effectively by suggesting who to mention, providing quick ways to invite every team member at once, and allowing for complete management of access rights and licenses.</p>
 
+                <p className="text--14 text--gray text--right hide-lg-up" style={{ width: '100%' }}>* This table is horizontally scrollable.</p>
+
                 <div className="table-wrapper">
                     <div className="table table--gray table--organization table--scrollable ">
                         <div className="table__row">

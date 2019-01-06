@@ -130,3 +130,26 @@
         margin-left: auto;
     }
 }
+
+/* Settings - Organization table */
+.page__content--org {
+    max-width: calc(100% - var(--width--sidebar-mobile));
+
+    @media (min-width: 768px) {
+        max-width: calc(100% - var(--width--sidebar-desktop));
+    }
+}
+
+.page--settings .table-wrapper {
+    width: 100%;
+}
+
+@media (max-width: 1199px) {
+    .page--settings .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .page--settings .table--organization {
+        min-width: 670px;
+    }
+}

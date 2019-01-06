@@ -9,31 +9,33 @@ export class SettingsOrganizations extends React.PureComponent<SettingsOrganizat
     // Render the app
     render() {
         return (
-            <div className="page__content">
+            <div className="page__content page__content--org">
                 <h2 className="h3">Organizations</h2>
 
                 <p className="form__note mb-2">Organizations allow people to work together much more effectively by suggesting who to mention, providing quick ways to invite every team member at once, and allowing for complete management of access rights and licenses.</p>
 
-                <div className="table table--gray">
-                    <div className="table__row">
-                        <div className="table__cell">
-                            <img src={require('./../../images/avatar-supernova-big.png')} alt="Supernova" />
-                        </div>
+                <div className="table-wrapper">
+                    <div className="table table--gray table--organization table--scrollable ">
+                        <div className="table__row">
+                            <div className="table__cell">
+                                <img src={require('./../../images/avatar-supernova-big.png')} alt="Supernova" />
+                            </div>
 
-                        <div className="table__cell">
-                            Supernova Studio
-                        </div>
+                            <div className="table__cell">
+                                Supernova Studio
+                            </div>
 
-                        <div className="table__cell">
-                            3 active projects
-                        </div>
+                            <div className="table__cell">
+                                3 active projects
+                            </div>
 
-                        <div className="table__cell">
-                            Member
-                        </div>
+                            <div className="table__cell">
+                                Member
+                            </div>
 
-                        <div className="table__cell">
-                            <a className="link--blue" href="#">Switch to workspace</a>
+                            <div className="table__cell">
+                                <a className="link--blue" href="#">Switch to workspace</a>
+                            </div>
                         </div>
                     </div>
                 </div>

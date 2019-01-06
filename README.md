@@ -6,18 +6,18 @@ Just use following command and watch the magic happen.
 
 ```
 # for Windows
-yarn start:w
+yarn s:w
 
 # for OSX
-yarn start:o
+yarn s:o
 ```
 
 or
 
 ```
 # for Windows
-npm run start:w
+npm run s:w
 
 # for OSX
-npm run start:o
+npm run s:o
 ```

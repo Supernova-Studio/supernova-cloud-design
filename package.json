@@ -12,8 +12,8 @@
     "Safari >= 10"
   ],
   "scripts": {
-    "start:o": "sh -ac '. .env.development && react-app-rewired start --scripts-version react-scripts-ts",
-    "start:w": "sh -ac '. ./.env.development && react-app-rewired start --scripts-version react-scripts-ts",
+    "s:o": "sh -ac '. .env.development && react-app-rewired start --scripts-version react-scripts-ts",
+    "s:w": "sh -ac '. ./.env.development && react-app-rewired start --scripts-version react-scripts-ts",
     "build": "react-app-rewired build --scripts-version react-scripts-ts",
     "test": "react-app-rewired test --scripts-version react-scripts-ts --env=jsdom",
     "lint": "tslint -c tslint.json 'src/**/*.ts', 'src/**/*.tsx' -o tslint.log"

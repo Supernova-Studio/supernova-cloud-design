@@ -1,5 +1,6 @@
 // Imports
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 import { Button } from 'src/components/button'
 
@@ -46,7 +47,9 @@ export class SettingsOrganizations extends React.PureComponent<SettingsOrganizat
 
                 <p className="form__note mb-2">Want to create a new organization? You’ll become the owner of the newly-created organization and will have the option to invite any remaining team members.</p>
 
-                <Button label="Create new organization" type="primary" />
+                <Link to="/create-org">
+                    <Button label="Create new organization" type="primary" />
+                </Link>
 
                 {false && <p className="notification notification--full notification--gray">You are not a member of an organization yet. <br /> Contact the organization owner to get an invite or <a className="link--blue" href="#">create a new one</a> right away.</p>}
             </div>

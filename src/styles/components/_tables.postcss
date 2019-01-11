@@ -7,11 +7,40 @@
     color: var(--color-blue-dark);
 }
 
+.table_header,
+.table__body,
 .table--gray {
     padding: 24px;
+}
+
+.table--gray {
     background-color: var(--color-gray-light);
     border: 1px solid rgba(35, 36, 43, .2);
     border-radius: var(--radius-small);
+}
+
+.table--rounded {
+    border-radius: var(--radius-small);
+
+    & .table_header {
+        border-top-left-radius: var(--radius-small);
+        border-top-right-radius: var(--radius-small);
+
+        &:only-child {
+            border-bottom-left-radius: var(--radius-small);
+            border-bottom-right-radius: var(--radius-small);
+        }
+    }
+
+    & .table__body {
+        border-bottom-left-radius: var(--radius-small);
+        border-bottom-right-radius: var(--radius-small);
+
+        &:only-child {
+            border-top-left-radius: var(--radius-small);
+            border-top-right-radius: var(--radius-small);
+        }
+    }
 }
 
 .table__row {
@@ -29,6 +58,21 @@
     & .table__row {
         flex-flow: row nowrap;
     }
+}
+
+.table_header,
+.table__body {
+    border-right: 1px solid rgba(35, 36, 43, .2);
+    border-bottom: 1px solid rgba(35, 36, 43, .2);
+    border-left: 1px solid rgba(35, 36, 43, .2);
+}
+
+.table_header {
+    background-color: var(--color-gray-light);
+    border-top: 1px solid rgba(35, 36, 43, .2);
+}
+
+.table__body {
 }
 
 .table__cell {

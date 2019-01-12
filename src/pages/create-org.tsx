@@ -132,12 +132,6 @@ export class CreateOrg extends React.Component {
                                         <p className="text--14">Unlimited Cloud and Studio for the whole team. All prototyping and hand-off features.</p>
 
                                         <p className="text--14">Extra team options - consolidated billing, access management, license management, premium support, and early access to cutting-edge features.</p>
-
-                                        <p className="text--14"><strong>Members of the organization</strong></p>
-
-                                        <p className="text--14">Members each get a Supernova Ultimate license and can create / edit / modify projects - usually your team.</p>
-
-                                        <p className="text--14">Clients can preview and provide feedback and <strong>don’t take up paid seats</strong> in your organization.</p>
                                     </div>
                                 </div>
                             </div>
@@ -149,11 +143,17 @@ export class CreateOrg extends React.Component {
 
                                 <div className="row">
                                     <div className="col-lg-8">
+                                        <p className="mb-2">Organization billing information is separate and is not shared with your personal Supernova account.</p>
+
                                         <FormCreateOrg />
                                     </div>
 
                                     <div className="col-lg-4 mt-lg-down-2">
-                                        <p className="text--14">Organization billing information is separate and is not shared with your personal Supernova account.</p>
+                                        <p className="text--14"><strong>Members of the organization</strong></p>
+
+                                        <p className="text--14">Members each get a Supernova Ultimate license and can create / edit / modify projects - usually your team.</p>
+
+                                        <p className="text--14">Clients can preview and provide feedback and <strong>don’t take up paid seats</strong> in your organization.</p>
                                     </div>
                                 </div>
                             </div>

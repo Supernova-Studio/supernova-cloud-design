@@ -27,7 +27,7 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
     // Render the app
     render() {
         return (
-            <form className="form form--gray form--personal">
+            <form className="form">
                 <fieldset>
                     <label htmlFor="inputName">Name on card</label>
 
@@ -85,30 +85,24 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
                     </div>
                 </div>
 
-                <hr className="divider mt-2 mb-2" />
-
                 <fieldset>
                     <div className="table table--default">
                         <div className="table__row">
-                            <div className="table__cell">
-                                <a href="#" className="link--blue text--bold">Pay Yearly and save $840 / year</a>
+                            <div className="table__cell flex-row">
+                                <strong>Pay Yearly and save $840</strong>&nbsp;&nbsp;<a href="#" className="link--blue text--bold">Switch to yearly</a>
                             </div>
                         </div>
 
                         <div className="table__row">
-                            <div className="table__cell text--normal">2 Starting Users (minimum)</div>
+                            <div className="table__cell text--bold">Billing interval</div>
 
-                            <div className="table__cell">
-                                <span><strong>{String.fromCharCode(36)}70</strong> / <span className="text--normal">month</span></span>
-                            </div>
+                            <div className="table__cell text--bold">Monthly</div>
                         </div>
 
                         <div className="table__row">
-                            <div className="table__cell text--normal">8 Additional Users</div>
+                            <div className="table__cell text--bold">Number of seats</div>
 
-                            <div className="table__cell">
-                                <span><strong>{String.fromCharCode(36)}280</strong> / <span className="text--normal">month</span></span>
-                            </div>
+                            <div className="table__cell text--bold">3 total, 2 paid</div>
                         </div>
 
                         <hr className="divider mt-2 mb-2" />
@@ -120,6 +114,8 @@ export class FormCreateOrg extends React.Component<FormCreateOrgProps, {}> {
                                 <strong>{String.fromCharCode(36)}240</strong>
                             </div>
                         </div>
+
+                        <hr className="divider mt-2 mb-2" />
                     </div>
                 </fieldset>
 
